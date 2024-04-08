@@ -14,29 +14,29 @@ namespace PryEstructuraDatos
         private clsNodo sig;
         private clsNodo ant;
 
-        private Int32 Codigo
+        public Int32 Codigo
         {
             get { return cod; }
             set { cod = value; }
         }
-        private String Nombre
+        public String Nombre
 
         {
             get { return nom; }
             set { nom = value; }
         }
-        private String Tramite
+        public String Tramite
         {
             get { return tra; }
             set { tra = value; }
         }
-        private clsNodo Siguiente
+        public clsNodo Siguiente
         {
             get { return sig; }
             set { sig = value; }
         }
 
-        private clsNodo Anterior
+        public  clsNodo Anterior
         {
             get { return ant; }
             set { ant = value; }
