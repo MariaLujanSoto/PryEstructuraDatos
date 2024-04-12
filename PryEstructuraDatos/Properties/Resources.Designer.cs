@@ -63,9 +63,59 @@ namespace PryEstructuraDatos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cola {
+        internal static System.Drawing.Bitmap imgCola {
             get {
-                object obj = ResourceManager.GetObject("cola", resourceCulture);
+                object obj = ResourceManager.GetObject("imgCola", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImgFondo {
+            get {
+                object obj = ResourceManager.GetObject("ImgFondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImgLista {
+            get {
+                object obj = ResourceManager.GetObject("ImgLista", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImgPila {
+            get {
+                object obj = ResourceManager.GetObject("ImgPila", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImgPila1 {
+            get {
+                object obj = ResourceManager.GetObject("ImgPila1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImgPila2 {
+            get {
+                object obj = ResourceManager.GetObject("ImgPila2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

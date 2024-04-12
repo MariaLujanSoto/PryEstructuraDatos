@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pctCola = new System.Windows.Forms.PictureBox();
             this.gpNuevoElemento = new System.Windows.Forms.GroupBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtTramiteNuevo = new System.Windows.Forms.TextBox();
@@ -52,22 +51,13 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lstCola = new System.Windows.Forms.ListBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            ((System.ComponentModel.ISupportInitialize)(this.pctCola)).BeginInit();
+            this.pctCola = new System.Windows.Forms.PictureBox();
             this.gpNuevoElemento.SuspendLayout();
             this.gpElementoEliminado.SuspendLayout();
             this.gpListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctCola)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pctCola
-            // 
-            this.pctCola.Image = global::PryEstructuraDatos.Properties.Resources.cola;
-            this.pctCola.Location = new System.Drawing.Point(27, 12);
-            this.pctCola.Name = "pctCola";
-            this.pctCola.Size = new System.Drawing.Size(190, 211);
-            this.pctCola.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctCola.TabIndex = 0;
-            this.pctCola.TabStop = false;
             // 
             // gpNuevoElemento
             // 
@@ -122,7 +112,7 @@
             this.lblTramiteNuevo.AutoSize = true;
             this.lblTramiteNuevo.Location = new System.Drawing.Point(16, 119);
             this.lblTramiteNuevo.Name = "lblTramiteNuevo";
-            this.lblTramiteNuevo.Size = new System.Drawing.Size(57, 16);
+            this.lblTramiteNuevo.Size = new System.Drawing.Size(56, 16);
             this.lblTramiteNuevo.TabIndex = 2;
             this.lblTramiteNuevo.Text = "Tràmite:";
             // 
@@ -131,7 +121,7 @@
             this.lblNombreNuevo.AutoSize = true;
             this.lblNombreNuevo.Location = new System.Drawing.Point(13, 81);
             this.lblNombreNuevo.Name = "lblNombreNuevo";
-            this.lblNombreNuevo.Size = new System.Drawing.Size(60, 16);
+            this.lblNombreNuevo.Size = new System.Drawing.Size(59, 16);
             this.lblNombreNuevo.TabIndex = 1;
             this.lblNombreNuevo.Text = "Nombre:";
             // 
@@ -140,7 +130,7 @@
             this.lblCodigoNuevo.AutoSize = true;
             this.lblCodigoNuevo.Location = new System.Drawing.Point(13, 47);
             this.lblCodigoNuevo.Name = "lblCodigoNuevo";
-            this.lblCodigoNuevo.Size = new System.Drawing.Size(55, 16);
+            this.lblCodigoNuevo.Size = new System.Drawing.Size(54, 16);
             this.lblCodigoNuevo.TabIndex = 0;
             this.lblCodigoNuevo.Text = "Còdigo:";
             // 
@@ -165,7 +155,7 @@
             // 
             this.btnEliminar.Location = new System.Drawing.Point(26, 164);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(146, 32);
+            this.btnEliminar.Size = new System.Drawing.Size(160, 32);
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -200,7 +190,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(23, 119);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 16);
+            this.label6.Size = new System.Drawing.Size(56, 16);
             this.label6.TabIndex = 6;
             this.label6.Text = "Tràmite:";
             // 
@@ -209,7 +199,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(23, 81);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 16);
+            this.label5.Size = new System.Drawing.Size(59, 16);
             this.label5.TabIndex = 6;
             this.label5.Text = "Nombre:";
             // 
@@ -218,7 +208,7 @@
             this.lblCodigoElimiado.AutoSize = true;
             this.lblCodigoElimiado.Location = new System.Drawing.Point(23, 47);
             this.lblCodigoElimiado.Name = "lblCodigoElimiado";
-            this.lblCodigoElimiado.Size = new System.Drawing.Size(55, 16);
+            this.lblCodigoElimiado.Size = new System.Drawing.Size(54, 16);
             this.lblCodigoElimiado.TabIndex = 6;
             this.lblCodigoElimiado.Text = "Còdigo:";
             // 
@@ -272,32 +262,43 @@
             this.lstCola.Size = new System.Drawing.Size(186, 173);
             this.lstCola.TabIndex = 0;
             // 
+            // pctCola
+            // 
+            this.pctCola.Image = global::PryEstructuraDatos.Properties.Resources.imgCola;
+            this.pctCola.Location = new System.Drawing.Point(27, 12);
+            this.pctCola.Name = "pctCola";
+            this.pctCola.Size = new System.Drawing.Size(205, 211);
+            this.pctCola.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctCola.TabIndex = 4;
+            this.pctCola.TabStop = false;
+            // 
             // frmCola
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 484);
+            this.BackgroundImage = global::PryEstructuraDatos.Properties.Resources.ImgFondo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(733, 487);
+            this.Controls.Add(this.pctCola);
             this.Controls.Add(this.gpListado);
             this.Controls.Add(this.gpElementoEliminado);
             this.Controls.Add(this.gpNuevoElemento);
-            this.Controls.Add(this.pctCola);
             this.Name = "frmCola";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura Dinàmica no Lineal - Cola";
             this.Load += new System.EventHandler(this.frmEstructuraNoLineal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pctCola)).EndInit();
             this.gpNuevoElemento.ResumeLayout(false);
             this.gpNuevoElemento.PerformLayout();
             this.gpElementoEliminado.ResumeLayout(false);
             this.gpElementoEliminado.PerformLayout();
             this.gpListado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctCola)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pctCola;
         private System.Windows.Forms.GroupBox gpNuevoElemento;
         private System.Windows.Forms.TextBox txtTramiteNuevo;
         private System.Windows.Forms.TextBox txtNombreNuevo;
@@ -321,5 +322,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.PictureBox pctCola;
     }
 }

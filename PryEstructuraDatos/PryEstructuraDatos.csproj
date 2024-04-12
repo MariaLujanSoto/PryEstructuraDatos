@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="clsCola.cs" />
     <Compile Include="clsNodo.cs" />
+    <Compile Include="clsPila.cs" />
     <Compile Include="frmDatosDesarrollador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +60,18 @@
     </Compile>
     <Compile Include="frmEstructuraNoLineal.Designer.cs">
       <DependentUpon>frmCola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaSimple.Designer.cs">
+      <DependentUpon>frmListaSimple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPila.Designer.cs">
+      <DependentUpon>frmPila.cs</DependentUpon>
     </Compile>
     <Compile Include="frmVentanaPrincipal.cs">
       <SubType>Form</SubType>
@@ -74,23 +87,29 @@
     <EmbeddedResource Include="frmDatosDesarrollador.resx">
       <DependentUpon>frmDatosDesarrollador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmListaSimple.resx">
+      <DependentUpon>frmListaSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPila.resx">
+      <DependentUpon>frmPila.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmVentanaPrincipal.resx">
       <DependentUpon>frmVentanaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -101,7 +120,34 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cola.jpg" />
+    <None Include="Resources\ImgPila.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pila.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listaS.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoED.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pila.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgPila2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgLista.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgFondo.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgPila1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgCola.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
