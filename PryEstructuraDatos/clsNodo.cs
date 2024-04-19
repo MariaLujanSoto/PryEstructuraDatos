@@ -42,7 +42,5 @@ namespace PryEstructuraDatos
             set { ant = value; }
         }
 
-
-
     }
 }

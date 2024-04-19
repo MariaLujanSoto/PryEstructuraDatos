@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsCola.cs" />
+    <Compile Include="clsListaDoble.cs" />
     <Compile Include="clsListaSimple.cs" />
     <Compile Include="clsNodo.cs" />
     <Compile Include="clsPila.cs" />
@@ -61,6 +62,12 @@
     </Compile>
     <Compile Include="frmEstructuraNoLineal.Designer.cs">
       <DependentUpon>frmCola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaDoble.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaDoble.Designer.cs">
+      <DependentUpon>frmListaDoble.cs</DependentUpon>
     </Compile>
     <Compile Include="frmListaSimple.cs">
       <SubType>Form</SubType>
@@ -87,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDatosDesarrollador.resx">
       <DependentUpon>frmDatosDesarrollador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaDoble.resx">
+      <DependentUpon>frmListaDoble.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaSimple.resx">
       <DependentUpon>frmListaSimple.cs</DependentUpon>
@@ -149,6 +159,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imgCola.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0-F7Qnr7Zs-dobles-s-.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
