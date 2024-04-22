@@ -175,7 +175,7 @@ namespace PryEstructuraDatos
                         }
                         Ant.Siguiente = Aux.Siguiente;
                         Aux = Aux.Siguiente;
-                        Aux.Anterior = Ant;
+                        Aux.Anterior = Ant; 
                     }
                 }
                 
