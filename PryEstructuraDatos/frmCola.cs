@@ -36,7 +36,7 @@ namespace PryEstructuraDatos
             FilaDePersonas.Recorrer();
 
             txtCodigoNuevo.Text = "";
-            txtCodigoNuevo.Text = "";
+            txtTramiteNuevo.Text = "";
             txtNombreNuevo.Text = "";
         }
 
@@ -44,7 +44,7 @@ namespace PryEstructuraDatos
         {
             if(FilaDePersonas.Primero != null)
             {
-                lblCodigoEliminado.Text = FilaDePersonas.Primero.ToString();
+                lblCodigoEliminado.Text = FilaDePersonas.Primero.Tramite.ToString();
                 lblNombreEliminado.Text = FilaDePersonas.Primero.Nombre;
                 lblTramiteEliminado.Text = FilaDePersonas.Primero.Tramite;
                 FilaDePersonas.Eliminar();
@@ -55,7 +55,7 @@ namespace PryEstructuraDatos
             }
             else
             {
-                lblCodigoElimiado.Text = "";
+                lblCodigoEliminado.Text = "";
                 lblNombreEliminado.Text = "";
                 lblTramiteEliminado.Text = "";
             }

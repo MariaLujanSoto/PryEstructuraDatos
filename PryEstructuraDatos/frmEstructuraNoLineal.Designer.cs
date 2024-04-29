@@ -43,7 +43,7 @@
             this.lblCodigoEliminado = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblCodigoElimiado = new System.Windows.Forms.Label();
+            this.lblCodigoEliminad = new System.Windows.Forms.Label();
             this.gpListado = new System.Windows.Forms.GroupBox();
             this.dgvCola = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -142,7 +142,7 @@
             this.gpElementoEliminado.Controls.Add(this.lblCodigoEliminado);
             this.gpElementoEliminado.Controls.Add(this.label6);
             this.gpElementoEliminado.Controls.Add(this.label5);
-            this.gpElementoEliminado.Controls.Add(this.lblCodigoElimiado);
+            this.gpElementoEliminado.Controls.Add(this.lblCodigoEliminad);
             this.gpElementoEliminado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpElementoEliminado.Location = new System.Drawing.Point(488, 12);
             this.gpElementoEliminado.Name = "gpElementoEliminado";
@@ -203,14 +203,14 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Nombre:";
             // 
-            // lblCodigoElimiado
+            // lblCodigoEliminad
             // 
-            this.lblCodigoElimiado.AutoSize = true;
-            this.lblCodigoElimiado.Location = new System.Drawing.Point(23, 47);
-            this.lblCodigoElimiado.Name = "lblCodigoElimiado";
-            this.lblCodigoElimiado.Size = new System.Drawing.Size(54, 16);
-            this.lblCodigoElimiado.TabIndex = 6;
-            this.lblCodigoElimiado.Text = "Còdigo:";
+            this.lblCodigoEliminad.AutoSize = true;
+            this.lblCodigoEliminad.Location = new System.Drawing.Point(23, 47);
+            this.lblCodigoEliminad.Name = "lblCodigoEliminad";
+            this.lblCodigoEliminad.Size = new System.Drawing.Size(54, 16);
+            this.lblCodigoEliminad.TabIndex = 6;
+            this.lblCodigoEliminad.Text = "Còdigo:";
             // 
             // gpListado
             // 
@@ -309,7 +309,7 @@
         private System.Windows.Forms.GroupBox gpElementoEliminado;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblCodigoElimiado;
+        private System.Windows.Forms.Label lblCodigoEliminad;
         private System.Windows.Forms.GroupBox gpListado;
         private System.Windows.Forms.DataGridView dgvCola;
         private System.Windows.Forms.ListBox lstCola;

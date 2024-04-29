@@ -41,21 +41,21 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblCodigoElimiado = new System.Windows.Forms.Label();
             this.gpListado = new System.Windows.Forms.GroupBox();
-            this.dgvListaDoble = new System.Windows.Forms.DataGridView();
+            this.btnPostOrden = new System.Windows.Forms.RadioButton();
+            this.btnPreOrden = new System.Windows.Forms.RadioButton();
+            this.btnIODesc = new System.Windows.Forms.RadioButton();
+            this.optIOAsc = new System.Windows.Forms.RadioButton();
+            this.dgvArbolBinario = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEquilibrar = new System.Windows.Forms.Button();
-            this.optIOAsc = new System.Windows.Forms.RadioButton();
-            this.btnIODesc = new System.Windows.Forms.RadioButton();
-            this.btnPreOrden = new System.Windows.Forms.RadioButton();
-            this.btnPostOrden = new System.Windows.Forms.RadioButton();
-            this.lstAB = new System.Windows.Forms.ListBox();
-            this.trvAB = new System.Windows.Forms.TreeView();
+            this.lstArbolBinario = new System.Windows.Forms.ListBox();
+            this.trvArbolBinario = new System.Windows.Forms.TreeView();
             this.gpNuevoElemento.SuspendLayout();
             this.gpElementoEliminado.SuspendLayout();
             this.gpListado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArbolBinario)).BeginInit();
             this.SuspendLayout();
             // 
             // gpNuevoElemento
@@ -83,6 +83,7 @@
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtTramiteNuevo
             // 
@@ -140,7 +141,7 @@
             this.gpElementoEliminado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpElementoEliminado.Location = new System.Drawing.Point(548, 22);
             this.gpElementoEliminado.Name = "gpElementoEliminado";
-            this.gpElementoEliminado.Size = new System.Drawing.Size(205, 125);
+            this.gpElementoEliminado.Size = new System.Drawing.Size(205, 147);
             this.gpElementoEliminado.TabIndex = 11;
             this.gpElementoEliminado.TabStop = false;
             this.gpElementoEliminado.Text = "Elemento Eliminado";
@@ -155,17 +156,18 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(17, 81);
+            this.btnEliminar.Location = new System.Drawing.Point(16, 101);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(160, 32);
+            this.btnEliminar.Size = new System.Drawing.Size(170, 34);
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblCodigoElimiado
             // 
             this.lblCodigoElimiado.AutoSize = true;
-            this.lblCodigoElimiado.Location = new System.Drawing.Point(23, 44);
+            this.lblCodigoElimiado.Location = new System.Drawing.Point(23, 47);
             this.lblCodigoElimiado.Name = "lblCodigoElimiado";
             this.lblCodigoElimiado.Size = new System.Drawing.Size(54, 16);
             this.lblCodigoElimiado.TabIndex = 6;
@@ -177,7 +179,7 @@
             this.gpListado.Controls.Add(this.btnPreOrden);
             this.gpListado.Controls.Add(this.btnIODesc);
             this.gpListado.Controls.Add(this.optIOAsc);
-            this.gpListado.Controls.Add(this.dgvListaDoble);
+            this.gpListado.Controls.Add(this.dgvArbolBinario);
             this.gpListado.Location = new System.Drawing.Point(44, 229);
             this.gpListado.Name = "gpListado";
             this.gpListado.Size = new System.Drawing.Size(728, 230);
@@ -185,18 +187,64 @@
             this.gpListado.TabStop = false;
             this.gpListado.Text = "Listado en una Lista y una Grilla";
             // 
-            // dgvListaDoble
+            // btnPostOrden
             // 
-            this.dgvListaDoble.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaDoble.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.btnPostOrden.AutoSize = true;
+            this.btnPostOrden.Location = new System.Drawing.Point(50, 159);
+            this.btnPostOrden.Name = "btnPostOrden";
+            this.btnPostOrden.Size = new System.Drawing.Size(78, 17);
+            this.btnPostOrden.TabIndex = 5;
+            this.btnPostOrden.TabStop = true;
+            this.btnPostOrden.Text = "Post-Orden";
+            this.btnPostOrden.UseVisualStyleBackColor = true;
+            // 
+            // btnPreOrden
+            // 
+            this.btnPreOrden.AutoSize = true;
+            this.btnPreOrden.Location = new System.Drawing.Point(50, 121);
+            this.btnPreOrden.Name = "btnPreOrden";
+            this.btnPreOrden.Size = new System.Drawing.Size(73, 17);
+            this.btnPreOrden.TabIndex = 4;
+            this.btnPreOrden.TabStop = true;
+            this.btnPreOrden.Text = "Pre-Orden";
+            this.btnPreOrden.UseVisualStyleBackColor = true;
+            // 
+            // btnIODesc
+            // 
+            this.btnIODesc.AutoSize = true;
+            this.btnIODesc.Location = new System.Drawing.Point(50, 84);
+            this.btnIODesc.Name = "btnIODesc";
+            this.btnIODesc.Size = new System.Drawing.Size(127, 17);
+            this.btnIODesc.TabIndex = 3;
+            this.btnIODesc.TabStop = true;
+            this.btnIODesc.Text = "In-Orden Descedente";
+            this.btnIODesc.UseVisualStyleBackColor = true;
+            this.btnIODesc.CheckedChanged += new System.EventHandler(this.btnIODesc_CheckedChanged);
+            // 
+            // optIOAsc
+            // 
+            this.optIOAsc.AutoSize = true;
+            this.optIOAsc.Location = new System.Drawing.Point(50, 47);
+            this.optIOAsc.Name = "optIOAsc";
+            this.optIOAsc.Size = new System.Drawing.Size(126, 17);
+            this.optIOAsc.TabIndex = 2;
+            this.optIOAsc.TabStop = true;
+            this.optIOAsc.Text = "In-Orden Ascendente";
+            this.optIOAsc.UseVisualStyleBackColor = true;
+            this.optIOAsc.CheckedChanged += new System.EventHandler(this.optIOAsc_CheckedChanged);
+            // 
+            // dgvArbolBinario
+            // 
+            this.dgvArbolBinario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArbolBinario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvListaDoble.Location = new System.Drawing.Point(231, 34);
-            this.dgvListaDoble.Name = "dgvListaDoble";
-            this.dgvListaDoble.ReadOnly = true;
-            this.dgvListaDoble.Size = new System.Drawing.Size(478, 169);
-            this.dgvListaDoble.TabIndex = 1;
+            this.dgvArbolBinario.Location = new System.Drawing.Point(231, 34);
+            this.dgvArbolBinario.Name = "dgvArbolBinario";
+            this.dgvArbolBinario.ReadOnly = true;
+            this.dgvArbolBinario.Size = new System.Drawing.Size(478, 169);
+            this.dgvArbolBinario.TabIndex = 1;
             // 
             // Column1
             // 
@@ -224,65 +272,22 @@
             this.btnEquilibrar.TabIndex = 12;
             this.btnEquilibrar.Text = "EQUILIBRAR";
             this.btnEquilibrar.UseVisualStyleBackColor = true;
+            this.btnEquilibrar.Click += new System.EventHandler(this.btnEquilibrar_Click);
             // 
-            // optIOAsc
+            // lstArbolBinario
             // 
-            this.optIOAsc.AutoSize = true;
-            this.optIOAsc.Location = new System.Drawing.Point(50, 47);
-            this.optIOAsc.Name = "optIOAsc";
-            this.optIOAsc.Size = new System.Drawing.Size(126, 17);
-            this.optIOAsc.TabIndex = 2;
-            this.optIOAsc.TabStop = true;
-            this.optIOAsc.Text = "In-Orden Ascendente";
-            this.optIOAsc.UseVisualStyleBackColor = true;
+            this.lstArbolBinario.FormattingEnabled = true;
+            this.lstArbolBinario.Location = new System.Drawing.Point(259, 24);
+            this.lstArbolBinario.Name = "lstArbolBinario";
+            this.lstArbolBinario.Size = new System.Drawing.Size(46, 199);
+            this.lstArbolBinario.TabIndex = 13;
             // 
-            // btnIODesc
+            // trvArbolBinario
             // 
-            this.btnIODesc.AutoSize = true;
-            this.btnIODesc.Location = new System.Drawing.Point(50, 84);
-            this.btnIODesc.Name = "btnIODesc";
-            this.btnIODesc.Size = new System.Drawing.Size(127, 17);
-            this.btnIODesc.TabIndex = 3;
-            this.btnIODesc.TabStop = true;
-            this.btnIODesc.Text = "In-Orden Descedente";
-            this.btnIODesc.UseVisualStyleBackColor = true;
-            // 
-            // btnPreOrden
-            // 
-            this.btnPreOrden.AutoSize = true;
-            this.btnPreOrden.Location = new System.Drawing.Point(50, 121);
-            this.btnPreOrden.Name = "btnPreOrden";
-            this.btnPreOrden.Size = new System.Drawing.Size(73, 17);
-            this.btnPreOrden.TabIndex = 4;
-            this.btnPreOrden.TabStop = true;
-            this.btnPreOrden.Text = "Pre-Orden";
-            this.btnPreOrden.UseVisualStyleBackColor = true;
-            // 
-            // btnPostOrden
-            // 
-            this.btnPostOrden.AutoSize = true;
-            this.btnPostOrden.Location = new System.Drawing.Point(50, 159);
-            this.btnPostOrden.Name = "btnPostOrden";
-            this.btnPostOrden.Size = new System.Drawing.Size(78, 17);
-            this.btnPostOrden.TabIndex = 5;
-            this.btnPostOrden.TabStop = true;
-            this.btnPostOrden.Text = "Post-Orden";
-            this.btnPostOrden.UseVisualStyleBackColor = true;
-            // 
-            // lstAB
-            // 
-            this.lstAB.FormattingEnabled = true;
-            this.lstAB.Location = new System.Drawing.Point(259, 24);
-            this.lstAB.Name = "lstAB";
-            this.lstAB.Size = new System.Drawing.Size(46, 199);
-            this.lstAB.TabIndex = 13;
-            // 
-            // trvAB
-            // 
-            this.trvAB.Location = new System.Drawing.Point(43, 22);
-            this.trvAB.Name = "trvAB";
-            this.trvAB.Size = new System.Drawing.Size(201, 196);
-            this.trvAB.TabIndex = 14;
+            this.trvArbolBinario.Location = new System.Drawing.Point(43, 22);
+            this.trvArbolBinario.Name = "trvArbolBinario";
+            this.trvArbolBinario.Size = new System.Drawing.Size(201, 196);
+            this.trvArbolBinario.TabIndex = 14;
             // 
             // frmArbolBinario
             // 
@@ -290,8 +295,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PryEstructuraDatos.Properties.Resources.ImgFondo;
             this.ClientSize = new System.Drawing.Size(811, 488);
-            this.Controls.Add(this.trvAB);
-            this.Controls.Add(this.lstAB);
+            this.Controls.Add(this.trvArbolBinario);
+            this.Controls.Add(this.lstArbolBinario);
             this.Controls.Add(this.btnEquilibrar);
             this.Controls.Add(this.gpListado);
             this.Controls.Add(this.gpElementoEliminado);
@@ -305,7 +310,7 @@
             this.gpElementoEliminado.PerformLayout();
             this.gpListado.ResumeLayout(false);
             this.gpListado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArbolBinario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -325,7 +330,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lblCodigoElimiado;
         private System.Windows.Forms.GroupBox gpListado;
-        private System.Windows.Forms.DataGridView dgvListaDoble;
+        private System.Windows.Forms.DataGridView dgvArbolBinario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -334,7 +339,7 @@
         private System.Windows.Forms.RadioButton btnPreOrden;
         private System.Windows.Forms.RadioButton btnIODesc;
         private System.Windows.Forms.RadioButton optIOAsc;
-        private System.Windows.Forms.ListBox lstAB;
-        private System.Windows.Forms.TreeView trvAB;
+        private System.Windows.Forms.ListBox lstArbolBinario;
+        private System.Windows.Forms.TreeView trvArbolBinario;
     }
 }

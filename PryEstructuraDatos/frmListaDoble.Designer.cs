@@ -48,8 +48,8 @@
             this.lblCodigoNuevo = new System.Windows.Forms.Label();
             this.pctListaS = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.optAscendente = new System.Windows.Forms.RadioButton();
             this.optDescendente = new System.Windows.Forms.RadioButton();
+            this.optAscendente = new System.Windows.Forms.RadioButton();
             this.gpListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).BeginInit();
             this.gpElementoEliminado.SuspendLayout();
@@ -128,6 +128,7 @@
             this.cmbListaDoble.Name = "cmbListaDoble";
             this.cmbListaDoble.Size = new System.Drawing.Size(103, 24);
             this.cmbListaDoble.TabIndex = 11;
+            this.cmbListaDoble.SelectedIndexChanged += new System.EventHandler(this.cmbListaDoble_SelectedIndexChanged);
             // 
             // btnEliminar
             // 
@@ -245,18 +246,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listar Datos";
             // 
-            // optAscendente
-            // 
-            this.optAscendente.AutoSize = true;
-            this.optAscendente.Location = new System.Drawing.Point(46, 26);
-            this.optAscendente.Name = "optAscendente";
-            this.optAscendente.Size = new System.Drawing.Size(97, 20);
-            this.optAscendente.TabIndex = 0;
-            this.optAscendente.TabStop = true;
-            this.optAscendente.Text = "Ascendente";
-            this.optAscendente.UseVisualStyleBackColor = true;
-            this.optAscendente.CheckedChanged += new System.EventHandler(this.optAscendente_CheckedChanged);
-            // 
             // optDescendente
             // 
             this.optDescendente.AutoSize = true;
@@ -268,6 +257,18 @@
             this.optDescendente.Text = "Descendente";
             this.optDescendente.UseVisualStyleBackColor = true;
             this.optDescendente.CheckedChanged += new System.EventHandler(this.optDescendente_CheckedChanged);
+            // 
+            // optAscendente
+            // 
+            this.optAscendente.AutoSize = true;
+            this.optAscendente.Location = new System.Drawing.Point(46, 26);
+            this.optAscendente.Name = "optAscendente";
+            this.optAscendente.Size = new System.Drawing.Size(97, 20);
+            this.optAscendente.TabIndex = 0;
+            this.optAscendente.TabStop = true;
+            this.optAscendente.Text = "Ascendente";
+            this.optAscendente.UseVisualStyleBackColor = true;
+            this.optAscendente.CheckedChanged += new System.EventHandler(this.optAscendente_CheckedChanged);
             // 
             // frmListaDoble
             // 

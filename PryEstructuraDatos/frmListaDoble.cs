@@ -62,7 +62,7 @@ namespace PryEstructuraDatos
                 Lista.Recorrer(lstListaDoble);
                 Lista.Recorrer(cmbListaDoble);
                 Lista.Recorrer();
-
+                cmbListaDoble.Text = "";
             }
             else
             {
@@ -87,6 +87,11 @@ namespace PryEstructuraDatos
             Lista.RecorrerDes(lstListaDoble);
 
             Lista.Recorrer();
+        }
+
+        private void cmbListaDoble_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
