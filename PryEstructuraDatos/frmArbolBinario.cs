@@ -80,8 +80,8 @@ namespace PryEstructuraDatos
 
         private void btnEquilibrar_Click(object sender, EventArgs e)
         {
-            //Arbol.Equilibrar();
-            //Arbol.Recorrer(trvArbolBinario);
+            Arbol.Equilibrar();
+            Arbol.Recorrer(trvArbolBinario);
         }
 
         private void btnIODesc_CheckedChanged(object sender, EventArgs e)

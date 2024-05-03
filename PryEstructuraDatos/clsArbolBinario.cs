@@ -145,7 +145,7 @@ namespace PryEstructuraDatos
                 InOrdenAsc(Cmb, R.Derecho);
             }
         }
-        //ASCENDENTE
+        //DESCENDENTE
 
         public void InOrdenDesc(DataGridView Dgv, clsNodo R)
         {
@@ -189,7 +189,6 @@ namespace PryEstructuraDatos
 
 
 
-
         //---------EQUILIBRAR Y GRABAR
 
         private clsNodo[] Vector = new clsNodo[100];
@@ -200,7 +199,7 @@ namespace PryEstructuraDatos
             i = 0;
             GrabarVectorInOrden(Raiz);
             Raiz = null;
-            EquilibrarArbol(0, 1 - i);
+            EquilibrarArbol(0, i-1);
         }
 
         private void EquilibrarArbol(Int32 ini, Int32 fin)
