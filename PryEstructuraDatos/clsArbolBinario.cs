@@ -313,14 +313,14 @@ namespace PryEstructuraDatos
 
         public void InOrdenDesc(ComboBox Cmb, clsNodo R)
         {
-            if (R.Izquierdo != null)
-            {
-                InOrdenDesc(Cmb, R.Izquierdo);
-            }
-            Cmb.Items.Add(R.Codigo);
             if (R.Derecho != null)
             {
                 InOrdenDesc(Cmb, R.Derecho);
+            }
+            Cmb.Items.Add(R.Codigo);
+            if (R.Izquierdo != null)
+            {
+                InOrdenDesc(Cmb, R.Izquierdo);
             }
         }
 
