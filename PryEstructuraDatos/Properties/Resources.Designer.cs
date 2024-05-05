@@ -73,6 +73,16 @@ namespace PryEstructuraDatos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fotoMS {
+            get {
+                object obj = ResourceManager.GetObject("fotoMS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgCola {
             get {
                 object obj = ResourceManager.GetObject("imgCola", resourceCulture);

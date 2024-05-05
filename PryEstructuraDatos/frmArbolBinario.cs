@@ -22,9 +22,10 @@ namespace PryEstructuraDatos
 
         private void optIOAsc_CheckedChanged(object sender, EventArgs e)
         {
-            Arbol.InOrdenAsc(dgvArbolBinario, Arbol.Raiz);
             Arbol.Recorrer(dgvArbolBinario);
-
+            Arbol.Recorrer(lstArbolBinario);
+            Arbol.Recorrer(cmbAB);
+               
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -86,8 +87,30 @@ namespace PryEstructuraDatos
 
         private void btnIODesc_CheckedChanged(object sender, EventArgs e)
         {
-            Arbol.InOrdenDesc(dgvArbolBinario, Arbol.Raiz);
-            Arbol.Recorrer(dgvArbolBinario);
+            Arbol.RecorrerDesc(dgvArbolBinario);
+            Arbol.RecorrerDesc(cmbAB);
+            Arbol.RecorrerDesc(lstArbolBinario);
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmVentanaPrincipal x = new frmVentanaPrincipal();
+            x.Show();
+            this.Hide();
+        }
+
+        private void btnPreOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            Arbol.RecorrerPreOrden(dgvArbolBinario);
+            Arbol.RecorrerPreOrden(lstArbolBinario);
+            Arbol.RecorrerPreOrden(cmbAB);
+        }
+
+        private void btnPostOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            Arbol.RecorrerPostOrden(dgvArbolBinario);
+            Arbol.RecorrerPostOrden(lstArbolBinario);
+            Arbol.RecorrerPostOrden(cmbAB);
         }
     }
 }

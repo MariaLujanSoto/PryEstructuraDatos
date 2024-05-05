@@ -274,14 +274,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 488);
+            this.BackgroundImage = global::PryEstructuraDatos.Properties.Resources.ImgFondo;
+            this.ClientSize = new System.Drawing.Size(791, 501);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pctListaS);
             this.Controls.Add(this.gpListado);
             this.Controls.Add(this.gpElementoEliminado);
             this.Controls.Add(this.gpNuevoElemento);
             this.Name = "frmListaDoble";
-            this.Text = "Lista Doblemente Enlazada";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Estructuras Lineales: Lista Doblemente Enlazada";
             this.Load += new System.EventHandler(this.frmListaDoble_Load);
             this.gpListado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaDoble)).EndInit();

@@ -68,6 +68,7 @@ namespace PryEstructuraDatos
             Grilla.Rows.Clear();
             InOrdenAsc(Grilla, Raiz);
         }
+
         public void Recorrer(ListBox Lista)
         {
             Lista.Items.Clear();
@@ -80,32 +81,180 @@ namespace PryEstructuraDatos
             TreeNode NodoPadre = new TreeNode("Arbol");
             tree.Nodes.Add(NodoPadre);
             PreOrden(Raiz, NodoPadre);
-            tree.ExpandAll(); //
+            tree.ExpandAll(); 
         }
 
-        public void Recorrer(ComboBox Combo)
+        public void Recorrer(ComboBox Cmb)
         {
-            Combo.Items.Clear();
-            InOrdenAsc(Combo, Raiz);
+            Cmb.Items.Clear();
+            InOrdenAsc(Cmb, Raiz);
+        }
+        public void RecorrerDesc(ListBox Lst)
+        {
+            Lst.Items.Clear();
+            InOrdenDesc(Lst, Raiz);
+        }
+
+        public void RecorrerDesc(DataGridView dgv)
+        {
+            dgv.Rows.Clear();
+            InOrdenDesc(dgv, Raiz);
+        }
+
+        public void RecorrerDesc(ComboBox Cmb)
+        {
+            Cmb.Items.Clear();
+            InOrdenDesc(Cmb, Raiz);
+        }
+
+        public void RecorrerPreOrden(DataGridView dgv)
+        {
+            dgv.Rows.Clear();
+            PreOrden(dgv, Raiz);
+        }
+
+        public void RecorrerPreOrden(ListBox Lst)
+        {
+            Lst.Items.Clear();
+            PreOrden(Lst, Raiz);
+        }
+
+        public void RecorrerPreOrden(ComboBox Cmb)
+        {
+            Cmb.Items.Clear();
+            PreOrden(Cmb, Raiz);
+        }
+
+        public void RecorrerPostOrden(ComboBox Cmb)
+        {
+            Cmb.Items.Clear();
+            PostOrden(Cmb, Raiz);
+        }
+        public void RecorrerPostOrden(ListBox lst)
+        {
+            lst.Items.Clear();
+            PostOrden(lst, Raiz);
+        }
+        public void RecorrerPostOrden(DataGridView dgv)
+        {
+            dgv.Rows.Clear();
+            PostOrden(dgv, Raiz);
         }
 
         //----------ORDENAMIENTOS
 
-                //ASCENDENTE
+        //POSTORDEN
+
+        public void PostOrden(ComboBox Cmb, clsNodo R)
+        {
+            if (R.Izquierdo != null)
+            {
+                PostOrden(Cmb, R.Izquierdo);
+            }
+
+            if (R.Derecho != null)
+            {
+                PostOrden(Cmb, R.Derecho);
+            }
+
+            Cmb.Items.Add(R.Codigo);
+        }
+
+        public void PostOrden(ListBox lst, clsNodo R)
+        {
+            if (R.Izquierdo != null)
+            {
+                PostOrden(lst, R.Izquierdo);
+            }
+
+            if (R.Derecho != null)
+            {
+                PostOrden(lst, R.Derecho);
+            }
+
+            lst.Items.Add(R.Codigo);
+        }
+
+        public void PostOrden(DataGridView dgv, clsNodo R)
+        {
+            if (R.Izquierdo != null)
+            {
+                PostOrden(dgv, R.Izquierdo);
+            }
+
+            if (R.Derecho != null)
+            {
+                PostOrden(dgv, R.Derecho);
+            }
+
+            dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+        }
+
+
+        //PREORDEN
         private void PreOrden(clsNodo R, TreeNode nodoTreeView)
         {
             TreeNode NodoPadre = new TreeNode(R.Codigo.ToString());
+
             nodoTreeView.Nodes.Add(NodoPadre);
 
             if (R.Izquierdo != null)
             {
                 PreOrden(R.Izquierdo, NodoPadre);
             }
+
             if (R.Derecho != null)
             {
                 PreOrden(R.Derecho, NodoPadre);
             }
         }
+
+        public void PreOrden(DataGridView dgv, clsNodo R) 
+        {
+            dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+
+            if (R.Izquierdo != null)
+            {
+                PreOrden(dgv, R.Izquierdo);
+            }
+
+            if (R.Derecho != null)
+            {
+                PreOrden(dgv, R.Derecho);
+            }
+        }
+        public void PreOrden(ComboBox Cmb, clsNodo R) 
+        {
+            Cmb.Items.Add(R.Codigo);
+
+            if (R.Izquierdo != null)
+            {
+                PreOrden(Cmb, R.Izquierdo);
+            }
+
+            if (R.Derecho != null)
+            {
+                PreOrden(Cmb, R.Derecho);
+            }
+        }
+
+        public void PreOrden(ListBox lst, clsNodo R) 
+        {
+            lst.Items.Add(R.Codigo);
+
+            if (R.Izquierdo != null)
+            {
+                PreOrden(lst, R.Izquierdo);
+            }
+
+            if (R.Derecho != null)
+            {
+                PreOrden(lst, R.Derecho);
+            }
+        }
+
+        //ASCENDENTE
+
         public void InOrdenAsc(DataGridView Dgv, clsNodo R)
         {
             if (R.Izquierdo != null)
@@ -160,19 +309,7 @@ namespace PryEstructuraDatos
             }
 
         }
-        public void InOrdenDesc(ListBox Lst, clsNodo R)
-        {
-            if (R.Izquierdo != null)
-            {
-                InOrdenDesc(Lst, R.Izquierdo);
-            }
-            Lst.Items.Add(R.Codigo);
-            if (R.Derecho != null)
-            {
-                InOrdenDesc(Lst, R.Derecho);
-            }
-        }
-
+        
 
         public void InOrdenDesc(ComboBox Cmb, clsNodo R)
         {
@@ -187,7 +324,20 @@ namespace PryEstructuraDatos
             }
         }
 
+        public void InOrdenDesc(ListBox Lst, clsNodo R)
+        {
+            if (R.Derecho != null)
+            {
+                InOrdenDesc(Lst, R.Derecho);
+            }
 
+            Lst.Items.Add(R.Codigo);
+
+            if (R.Izquierdo != null)
+            {
+                InOrdenDesc(Lst, R.Izquierdo);
+            }
+        }
 
         //---------EQUILIBRAR Y GRABAR
 

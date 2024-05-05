@@ -16,5 +16,27 @@ namespace PryEstructuraDatos
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmDatosDesarrollador_Load(object sender, EventArgs e)
+        {
+            lblMiDni.Text = "43530842";
+            lblMiApellido.Text = "Soto";
+            lblMiNombre.Text = "María Luján";
+            lblMateria.Text = "Estructura De Datos";
+            lblCarrera.Text = "Analista de Sistemas";
+            lblFecha.Text = "10/05/2024";
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmVentanaPrincipal x = new frmVentanaPrincipal();
+            x.Show();
+            this.Hide();
+        }
     }
 }

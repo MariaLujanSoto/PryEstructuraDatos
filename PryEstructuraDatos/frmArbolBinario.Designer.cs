@@ -68,7 +68,7 @@
             this.gpNuevoElemento.Controls.Add(this.lblNombreNuevo);
             this.gpNuevoElemento.Controls.Add(this.lblCodigoNuevo);
             this.gpNuevoElemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpNuevoElemento.Location = new System.Drawing.Point(322, 22);
+            this.gpNuevoElemento.Location = new System.Drawing.Point(338, 22);
             this.gpNuevoElemento.Name = "gpNuevoElemento";
             this.gpNuevoElemento.Size = new System.Drawing.Size(192, 196);
             this.gpNuevoElemento.TabIndex = 10;
@@ -139,7 +139,7 @@
             this.gpElementoEliminado.Controls.Add(this.btnEliminar);
             this.gpElementoEliminado.Controls.Add(this.lblCodigoElimiado);
             this.gpElementoEliminado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpElementoEliminado.Location = new System.Drawing.Point(548, 22);
+            this.gpElementoEliminado.Location = new System.Drawing.Point(564, 22);
             this.gpElementoEliminado.Name = "gpElementoEliminado";
             this.gpElementoEliminado.Size = new System.Drawing.Size(205, 147);
             this.gpElementoEliminado.TabIndex = 11;
@@ -148,6 +148,8 @@
             // 
             // cmbAB
             // 
+            this.cmbAB.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbAB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAB.FormattingEnabled = true;
             this.cmbAB.Location = new System.Drawing.Point(83, 41);
             this.cmbAB.Name = "cmbAB";
@@ -177,12 +179,13 @@
             // 
             this.gpListado.Controls.Add(this.btnPostOrden);
             this.gpListado.Controls.Add(this.btnPreOrden);
+            this.gpListado.Controls.Add(this.lstArbolBinario);
             this.gpListado.Controls.Add(this.btnIODesc);
             this.gpListado.Controls.Add(this.optIOAsc);
             this.gpListado.Controls.Add(this.dgvArbolBinario);
             this.gpListado.Location = new System.Drawing.Point(44, 229);
             this.gpListado.Name = "gpListado";
-            this.gpListado.Size = new System.Drawing.Size(728, 230);
+            this.gpListado.Size = new System.Drawing.Size(791, 230);
             this.gpListado.TabIndex = 12;
             this.gpListado.TabStop = false;
             this.gpListado.Text = "Listado en una Lista y una Grilla";
@@ -197,6 +200,7 @@
             this.btnPostOrden.TabStop = true;
             this.btnPostOrden.Text = "Post-Orden";
             this.btnPostOrden.UseVisualStyleBackColor = true;
+            this.btnPostOrden.CheckedChanged += new System.EventHandler(this.btnPostOrden_CheckedChanged);
             // 
             // btnPreOrden
             // 
@@ -208,6 +212,7 @@
             this.btnPreOrden.TabStop = true;
             this.btnPreOrden.Text = "Pre-Orden";
             this.btnPreOrden.UseVisualStyleBackColor = true;
+            this.btnPreOrden.CheckedChanged += new System.EventHandler(this.btnPreOrden_CheckedChanged);
             // 
             // btnIODesc
             // 
@@ -266,7 +271,7 @@
             // 
             // btnEquilibrar
             // 
-            this.btnEquilibrar.Location = new System.Drawing.Point(548, 175);
+            this.btnEquilibrar.Location = new System.Drawing.Point(564, 175);
             this.btnEquilibrar.Name = "btnEquilibrar";
             this.btnEquilibrar.Size = new System.Drawing.Size(205, 43);
             this.btnEquilibrar.TabIndex = 12;
@@ -277,14 +282,14 @@
             // lstArbolBinario
             // 
             this.lstArbolBinario.FormattingEnabled = true;
-            this.lstArbolBinario.Location = new System.Drawing.Point(259, 24);
+            this.lstArbolBinario.Location = new System.Drawing.Point(730, 34);
             this.lstArbolBinario.Name = "lstArbolBinario";
-            this.lstArbolBinario.Size = new System.Drawing.Size(46, 199);
+            this.lstArbolBinario.Size = new System.Drawing.Size(46, 173);
             this.lstArbolBinario.TabIndex = 13;
             // 
             // trvArbolBinario
             // 
-            this.trvArbolBinario.Location = new System.Drawing.Point(43, 22);
+            this.trvArbolBinario.Location = new System.Drawing.Point(85, 22);
             this.trvArbolBinario.Name = "trvArbolBinario";
             this.trvArbolBinario.Size = new System.Drawing.Size(201, 196);
             this.trvArbolBinario.TabIndex = 14;
@@ -294,9 +299,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PryEstructuraDatos.Properties.Resources.ImgFondo;
-            this.ClientSize = new System.Drawing.Size(811, 488);
+            this.ClientSize = new System.Drawing.Size(873, 488);
             this.Controls.Add(this.trvArbolBinario);
-            this.Controls.Add(this.lstArbolBinario);
             this.Controls.Add(this.btnEquilibrar);
             this.Controls.Add(this.gpListado);
             this.Controls.Add(this.gpElementoEliminado);

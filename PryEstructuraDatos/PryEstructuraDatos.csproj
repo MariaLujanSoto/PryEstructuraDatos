@@ -173,5 +173,8 @@
   <ItemGroup>
     <None Include="Resources\0-F7Qnr7Zs-dobles-s-.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotoMS.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

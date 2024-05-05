@@ -112,7 +112,7 @@
             this.gpElementoEliminado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpElementoEliminado.Location = new System.Drawing.Point(530, 12);
             this.gpElementoEliminado.Name = "gpElementoEliminado";
-            this.gpElementoEliminado.Size = new System.Drawing.Size(205, 211);
+            this.gpElementoEliminado.Size = new System.Drawing.Size(205, 135);
             this.gpElementoEliminado.TabIndex = 6;
             this.gpElementoEliminado.TabStop = false;
             this.gpElementoEliminado.Text = "Elemento Eliminado";
@@ -120,14 +120,14 @@
             // cmbEliminar
             // 
             this.cmbEliminar.FormattingEnabled = true;
-            this.cmbEliminar.Location = new System.Drawing.Point(83, 126);
+            this.cmbEliminar.Location = new System.Drawing.Point(83, 41);
             this.cmbEliminar.Name = "cmbEliminar";
             this.cmbEliminar.Size = new System.Drawing.Size(103, 24);
             this.cmbEliminar.TabIndex = 11;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(26, 164);
+            this.btnEliminar.Location = new System.Drawing.Point(26, 79);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(160, 32);
             this.btnEliminar.TabIndex = 10;
@@ -138,7 +138,7 @@
             // lblCodigoElimiado
             // 
             this.lblCodigoElimiado.AutoSize = true;
-            this.lblCodigoElimiado.Location = new System.Drawing.Point(23, 129);
+            this.lblCodigoElimiado.Location = new System.Drawing.Point(23, 44);
             this.lblCodigoElimiado.Name = "lblCodigoElimiado";
             this.lblCodigoElimiado.Size = new System.Drawing.Size(54, 16);
             this.lblCodigoElimiado.TabIndex = 6;
@@ -232,14 +232,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::PryEstructuraDatos.Properties.Resources.ImgFondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(812, 489);
+            this.ClientSize = new System.Drawing.Size(812, 500);
             this.Controls.Add(this.pctListaS);
             this.Controls.Add(this.gpListado);
             this.Controls.Add(this.gpElementoEliminado);
             this.Controls.Add(this.gpNuevoElemento);
             this.Name = "frmListaSimple";
-            this.Text = "Estructura de Datos: Lista Simple";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Estructuras Lineales: Lista Simple";
             this.Load += new System.EventHandler(this.frmListaSimple_Load);
             this.gpListado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaS)).EndInit();

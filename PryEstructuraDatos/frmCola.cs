@@ -44,7 +44,7 @@ namespace PryEstructuraDatos
         {
             if(FilaDePersonas.Primero != null)
             {
-                lblCodigoEliminado.Text = FilaDePersonas.Primero.Tramite.ToString();
+                lblCodigoEliminado.Text = FilaDePersonas.Primero.Codigo.ToString();
                 lblNombreEliminado.Text = FilaDePersonas.Primero.Nombre;
                 lblTramiteEliminado.Text = FilaDePersonas.Primero.Tramite;
                 FilaDePersonas.Eliminar();
@@ -59,6 +59,18 @@ namespace PryEstructuraDatos
                 lblNombreEliminado.Text = "";
                 lblTramiteEliminado.Text = "";
             }
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmVentanaPrincipal x = new frmVentanaPrincipal();
+            x.Show();
+            this.Hide();
+        }
+
+        private void txtTramiteNuevo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

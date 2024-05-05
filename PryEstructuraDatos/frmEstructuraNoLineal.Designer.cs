@@ -43,14 +43,13 @@
             this.lblCodigoEliminado = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblCodigoEliminad = new System.Windows.Forms.Label();
+            this.lblCod = new System.Windows.Forms.Label();
             this.gpListado = new System.Windows.Forms.GroupBox();
             this.dgvCola = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lstCola = new System.Windows.Forms.ListBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pctCola = new System.Windows.Forms.PictureBox();
             this.gpNuevoElemento.SuspendLayout();
             this.gpElementoEliminado.SuspendLayout();
@@ -69,7 +68,7 @@
             this.gpNuevoElemento.Controls.Add(this.lblNombreNuevo);
             this.gpNuevoElemento.Controls.Add(this.lblCodigoNuevo);
             this.gpNuevoElemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpNuevoElemento.Location = new System.Drawing.Point(258, 12);
+            this.gpNuevoElemento.Location = new System.Drawing.Point(271, 12);
             this.gpNuevoElemento.Name = "gpNuevoElemento";
             this.gpNuevoElemento.Size = new System.Drawing.Size(192, 211);
             this.gpNuevoElemento.TabIndex = 1;
@@ -92,6 +91,7 @@
             this.txtTramiteNuevo.Name = "txtTramiteNuevo";
             this.txtTramiteNuevo.Size = new System.Drawing.Size(100, 22);
             this.txtTramiteNuevo.TabIndex = 5;
+            this.txtTramiteNuevo.TextChanged += new System.EventHandler(this.txtTramiteNuevo_TextChanged);
             // 
             // txtNombreNuevo
             // 
@@ -142,9 +142,9 @@
             this.gpElementoEliminado.Controls.Add(this.lblCodigoEliminado);
             this.gpElementoEliminado.Controls.Add(this.label6);
             this.gpElementoEliminado.Controls.Add(this.label5);
-            this.gpElementoEliminado.Controls.Add(this.lblCodigoEliminad);
+            this.gpElementoEliminado.Controls.Add(this.lblCod);
             this.gpElementoEliminado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gpElementoEliminado.Location = new System.Drawing.Point(488, 12);
+            this.gpElementoEliminado.Location = new System.Drawing.Point(501, 12);
             this.gpElementoEliminado.Name = "gpElementoEliminado";
             this.gpElementoEliminado.Size = new System.Drawing.Size(205, 211);
             this.gpElementoEliminado.TabIndex = 2;
@@ -203,20 +203,20 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Nombre:";
             // 
-            // lblCodigoEliminad
+            // lblCod
             // 
-            this.lblCodigoEliminad.AutoSize = true;
-            this.lblCodigoEliminad.Location = new System.Drawing.Point(23, 47);
-            this.lblCodigoEliminad.Name = "lblCodigoEliminad";
-            this.lblCodigoEliminad.Size = new System.Drawing.Size(54, 16);
-            this.lblCodigoEliminad.TabIndex = 6;
-            this.lblCodigoEliminad.Text = "Còdigo:";
+            this.lblCod.AutoSize = true;
+            this.lblCod.Location = new System.Drawing.Point(23, 47);
+            this.lblCod.Name = "lblCod";
+            this.lblCod.Size = new System.Drawing.Size(54, 16);
+            this.lblCod.TabIndex = 6;
+            this.lblCod.Text = "Còdigo:";
             // 
             // gpListado
             // 
             this.gpListado.Controls.Add(this.dgvCola);
             this.gpListado.Controls.Add(this.lstCola);
-            this.gpListado.Location = new System.Drawing.Point(27, 242);
+            this.gpListado.Location = new System.Drawing.Point(40, 242);
             this.gpListado.Name = "gpListado";
             this.gpListado.Size = new System.Drawing.Size(666, 230);
             this.gpListado.TabIndex = 3;
@@ -230,7 +230,7 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvCola.Location = new System.Drawing.Point(222, 38);
+            this.dgvCola.Location = new System.Drawing.Point(231, 38);
             this.dgvCola.Name = "dgvCola";
             this.dgvCola.ReadOnly = true;
             this.dgvCola.Size = new System.Drawing.Size(425, 169);
@@ -265,7 +265,7 @@
             // pctCola
             // 
             this.pctCola.Image = global::PryEstructuraDatos.Properties.Resources.imgCola;
-            this.pctCola.Location = new System.Drawing.Point(27, 12);
+            this.pctCola.Location = new System.Drawing.Point(40, 12);
             this.pctCola.Name = "pctCola";
             this.pctCola.Size = new System.Drawing.Size(205, 211);
             this.pctCola.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -278,14 +278,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PryEstructuraDatos.Properties.Resources.ImgFondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(733, 487);
+            this.ClientSize = new System.Drawing.Size(733, 497);
             this.Controls.Add(this.pctCola);
             this.Controls.Add(this.gpListado);
             this.Controls.Add(this.gpElementoEliminado);
             this.Controls.Add(this.gpNuevoElemento);
             this.Name = "frmCola";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Estructura Dinàmica no Lineal - Cola";
+            this.Text = "Estructuras Lineales: COLA";
             this.Load += new System.EventHandler(this.frmEstructuraNoLineal_Load);
             this.gpNuevoElemento.ResumeLayout(false);
             this.gpNuevoElemento.PerformLayout();
@@ -309,7 +309,7 @@
         private System.Windows.Forms.GroupBox gpElementoEliminado;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblCodigoEliminad;
+        private System.Windows.Forms.Label lblCod;
         private System.Windows.Forms.GroupBox gpListado;
         private System.Windows.Forms.DataGridView dgvCola;
         private System.Windows.Forms.ListBox lstCola;
@@ -321,7 +321,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.PictureBox pctCola;
     }
 }

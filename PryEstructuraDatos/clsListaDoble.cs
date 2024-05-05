@@ -35,7 +35,7 @@ namespace PryEstructuraDatos
             }
             else
             {
-                if (Nvo.Codigo < Primero.Codigo)
+                if (Nvo.Codigo <= Primero.Codigo)
                 {
                     Nvo.Siguiente = Primero;
                     Primero.Anterior = Nvo;

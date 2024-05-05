@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PryEstructuraDatos
 {
-    public partial class Form1 : Form
+    public partial class frmVentanaPrincipal : Form
     {
-        public Form1()
+        public frmVentanaPrincipal()
         {
             InitializeComponent();
         }
@@ -21,42 +21,45 @@ namespace PryEstructuraDatos
         {
             frmDatosDesarrollador frmDatosDesarrollador = new frmDatosDesarrollador();
             frmDatosDesarrollador.Show();
-            this.Hide();
         }
 
         private void colaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCola frmCola = new frmCola();
             frmCola.Show();
-            this.Hide();
         }
 
         private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPila frmPila = new frmPila();    
             frmPila.Show();
-            this.Hide();
         }
 
         private void listaSimpleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListaSimple frmListaSimple = new frmListaSimple();
             frmListaSimple.Show();
-            this.Hide();
         }
 
         private void listaDobleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListaDoble frmListaDoble = new frmListaDoble();
             frmListaDoble.Show();
-            this.Hide();
         }
 
         private void arbolBinarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmArbolBinario frmArbolBinario = new frmArbolBinario();
             frmArbolBinario.Show();
-            this.Hide();
+        }
+
+        private void sALIRToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("¿Desea salir del sistema?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

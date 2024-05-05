@@ -56,7 +56,7 @@ namespace PryEstructuraDatos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (Lista.Primero != null)
+            if (Lista.Primero != null && cmbEliminar.Text != "")
             {
                 Int32 x = Convert.ToInt32(cmbEliminar.Text);
                 Lista.Eliminar(x);
@@ -64,13 +64,31 @@ namespace PryEstructuraDatos
                 Lista.Recorrer(lstListaS);
                 Lista.Recorrer(cmbEliminar);
                 Lista.Recorrer();
+                cmbEliminar.Text = "";
+
 
             }
             else
             {
+                if(cmbEliminar.Text== "")
+                {
+                    MessageBox.Show("Debe seleccionar un valor");
 
-                MessageBox.Show("La lista esta vacia");
+                }
+                else
+                {
+                    MessageBox.Show("La lista esta vacia");
+
+                }
+
             }
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmVentanaPrincipal x = new frmVentanaPrincipal();
+            x.Show();
+            this.Hide();
         }
     }
 }

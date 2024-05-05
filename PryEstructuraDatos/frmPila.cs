@@ -35,7 +35,7 @@ namespace PryEstructuraDatos
             Pila.Recorrer(lstPila);
             Pila.Recorrer();
 
-            txtCodigoNuevo.Text = "";
+            txtTramiteNuevo.Text = "";
             txtCodigoNuevo.Text = "";
             txtNombreNuevo.Text = "";
         }
@@ -44,7 +44,7 @@ namespace PryEstructuraDatos
         {
             if (Pila.Primero != null)
             {
-                lblCodigoEliminado.Text = Pila.Primero.ToString();
+                lblCodigoEliminado.Text = Pila.Primero.Codigo.ToString();
                 lblNombreEliminado.Text = Pila.Primero.Nombre;
                 lblTramiteEliminado.Text = Pila.Primero.Tramite;
                 Pila.Eliminar();
@@ -55,10 +55,17 @@ namespace PryEstructuraDatos
             }
             else
             {
-                lblCodigoElimiado.Text = "";
+                lblCodigoEliminado.Text = "";
                 lblNombreEliminado.Text = "";
                 lblTramiteEliminado.Text = "";
             }
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmVentanaPrincipal x = new frmVentanaPrincipal();
+            x.Show();
+            this.Hide();
         }
     }
 }

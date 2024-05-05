@@ -41,7 +41,7 @@
             this.lblCodigoEliminado = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblCodigoElimiado = new System.Windows.Forms.Label();
+            this.lblCod = new System.Windows.Forms.Label();
             this.gpNuevoElemento = new System.Windows.Forms.GroupBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtTramiteNuevo = new System.Windows.Forms.TextBox();
@@ -116,7 +116,7 @@
             this.gpElementoEliminado.Controls.Add(this.lblCodigoEliminado);
             this.gpElementoEliminado.Controls.Add(this.label6);
             this.gpElementoEliminado.Controls.Add(this.label5);
-            this.gpElementoEliminado.Controls.Add(this.lblCodigoElimiado);
+            this.gpElementoEliminado.Controls.Add(this.lblCod);
             this.gpElementoEliminado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpElementoEliminado.Location = new System.Drawing.Point(505, 22);
             this.gpElementoEliminado.Name = "gpElementoEliminado";
@@ -177,14 +177,14 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Nombre:";
             // 
-            // lblCodigoElimiado
+            // lblCod
             // 
-            this.lblCodigoElimiado.AutoSize = true;
-            this.lblCodigoElimiado.Location = new System.Drawing.Point(23, 47);
-            this.lblCodigoElimiado.Name = "lblCodigoElimiado";
-            this.lblCodigoElimiado.Size = new System.Drawing.Size(54, 16);
-            this.lblCodigoElimiado.TabIndex = 6;
-            this.lblCodigoElimiado.Text = "Còdigo:";
+            this.lblCod.AutoSize = true;
+            this.lblCod.Location = new System.Drawing.Point(23, 47);
+            this.lblCod.Name = "lblCod";
+            this.lblCod.Size = new System.Drawing.Size(54, 16);
+            this.lblCod.TabIndex = 6;
+            this.lblCod.Text = "Còdigo:";
             // 
             // gpNuevoElemento
             // 
@@ -284,7 +284,7 @@
             this.Controls.Add(this.gpNuevoElemento);
             this.Name = "frmPila";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Estructura de Datos: PILA";
+            this.Text = "Estructuras Lineales: PILA";
             this.Load += new System.EventHandler(this.frmPila_Load);
             this.gpListado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPila)).EndInit();
@@ -312,7 +312,7 @@
         private System.Windows.Forms.Label lblCodigoEliminado;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblCodigoElimiado;
+        private System.Windows.Forms.Label lblCod;
         private System.Windows.Forms.GroupBox gpNuevoElemento;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.TextBox txtTramiteNuevo;

@@ -1,6 +1,6 @@
 ﻿namespace PryEstructuraDatos
 {
-    partial class Form1
+    partial class frmVentanaPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -33,7 +33,7 @@
             this.datosDelDesarrolladorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.sALIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.estructurasLinealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.frmVenatanaPrincipal = new System.Windows.Forms.ToolStripMenuItem();
             this.colaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pilaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
@@ -53,7 +53,7 @@
             // 
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sistemmaToolStripMenuItem,
-            this.estructurasLinealesToolStripMenuItem,
+            this.frmVenatanaPrincipal,
             this.estructurasNoLinealesToolStripMenuItem,
             this.baseDeDatosToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
@@ -89,49 +89,50 @@
             this.sALIRToolStripMenuItem.Name = "sALIRToolStripMenuItem";
             this.sALIRToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.sALIRToolStripMenuItem.Text = "Salir";
+            this.sALIRToolStripMenuItem.Click += new System.EventHandler(this.sALIRToolStripMenuItem_Click);
             // 
-            // estructurasLinealesToolStripMenuItem
+            // frmVenatanaPrincipal
             // 
-            this.estructurasLinealesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.frmVenatanaPrincipal.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.colaToolStripMenuItem,
             this.pilaToolStripMenuItem,
             this.toolStripMenuItem2,
             this.listaSimpleToolStripMenuItem,
             this.listaDobleToolStripMenuItem});
-            this.estructurasLinealesToolStripMenuItem.Name = "estructurasLinealesToolStripMenuItem";
-            this.estructurasLinealesToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
-            this.estructurasLinealesToolStripMenuItem.Text = "Estructuras Lineales";
+            this.frmVenatanaPrincipal.Name = "frmVenatanaPrincipal";
+            this.frmVenatanaPrincipal.Size = new System.Drawing.Size(122, 20);
+            this.frmVenatanaPrincipal.Text = "Estructuras Lineales";
             // 
             // colaToolStripMenuItem
             // 
             this.colaToolStripMenuItem.Name = "colaToolStripMenuItem";
-            this.colaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.colaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.colaToolStripMenuItem.Text = "Cola...";
             this.colaToolStripMenuItem.Click += new System.EventHandler(this.colaToolStripMenuItem_Click);
             // 
             // pilaToolStripMenuItem
             // 
             this.pilaToolStripMenuItem.Name = "pilaToolStripMenuItem";
-            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.pilaToolStripMenuItem.Text = "Pila...";
             this.pilaToolStripMenuItem.Click += new System.EventHandler(this.pilaToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(143, 6);
             // 
             // listaSimpleToolStripMenuItem
             // 
             this.listaSimpleToolStripMenuItem.Name = "listaSimpleToolStripMenuItem";
-            this.listaSimpleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaSimpleToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.listaSimpleToolStripMenuItem.Text = "Lista Simple...";
             this.listaSimpleToolStripMenuItem.Click += new System.EventHandler(this.listaSimpleToolStripMenuItem_Click);
             // 
             // listaDobleToolStripMenuItem
             // 
             this.listaDobleToolStripMenuItem.Name = "listaDobleToolStripMenuItem";
-            this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.listaDobleToolStripMenuItem.Text = "Lista Doble...";
             this.listaDobleToolStripMenuItem.Click += new System.EventHandler(this.listaDobleToolStripMenuItem_Click);
             // 
@@ -146,7 +147,7 @@
             // arbolBinarioToolStripMenuItem
             // 
             this.arbolBinarioToolStripMenuItem.Name = "arbolBinarioToolStripMenuItem";
-            this.arbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.arbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.arbolBinarioToolStripMenuItem.Text = "Arbol Binario...";
             this.arbolBinarioToolStripMenuItem.Click += new System.EventHandler(this.arbolBinarioToolStripMenuItem_Click);
             // 
@@ -184,7 +185,7 @@
             this.repasoDeOperacionesToolStripMenuItem.Size = new System.Drawing.Size(302, 22);
             this.repasoDeOperacionesToolStripMenuItem.Text = "Repaso de Operaciones...";
             // 
-            // Form1
+            // frmVentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -193,9 +194,9 @@
             this.ClientSize = new System.Drawing.Size(679, 422);
             this.Controls.Add(this.menu);
             this.MainMenuStrip = this.menu;
-            this.Name = "Form1";
+            this.Name = "frmVentanaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu";
+            this.Text = "Menu Principal EDD";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
@@ -211,7 +212,7 @@
         private System.Windows.Forms.ToolStripMenuItem datosDelDesarrolladorToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem sALIRToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem estructurasLinealesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem frmVenatanaPrincipal;
         private System.Windows.Forms.ToolStripMenuItem colaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pilaToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;

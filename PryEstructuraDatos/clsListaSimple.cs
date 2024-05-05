@@ -25,7 +25,7 @@ namespace PryEstructuraDatos
             }
             else
             {
-                if (Nuevo.Codigo < Primero.Codigo)
+                if (Nuevo.Codigo <= Primero.Codigo)
                 {
                     Nuevo.Siguiente = Primero;
                     Primero = Nuevo;
@@ -102,7 +102,7 @@ namespace PryEstructuraDatos
         public void Recorrer()
         {
             clsNodo aux = Primero;
-            StreamWriter AD = new StreamWriter("cola.csv", false, Encoding.UTF8);
+            StreamWriter AD = new StreamWriter("ListaSimple.csv", false, Encoding.UTF8);
             AD.WriteLine("Lista de espera\n");
             AD.WriteLine("Codigo;Nombre;Tramite");
             while (aux != null)

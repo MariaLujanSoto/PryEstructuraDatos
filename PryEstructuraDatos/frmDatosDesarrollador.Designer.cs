@@ -35,22 +35,25 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblMiDni = new System.Windows.Forms.Label();
+            this.lblMiNombre = new System.Windows.Forms.Label();
+            this.lblMiApellido = new System.Windows.Forms.Label();
+            this.lblMateria = new System.Windows.Forms.Label();
+            this.lblCarrera = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::PryEstructuraDatos.Properties.Resources.fotoMS;
             this.pictureBox1.Location = new System.Drawing.Point(49, 42);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(167, 157);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblDni
             // 
@@ -118,53 +121,59 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Fecha:";
             // 
-            // label6
+            // lblMiDni
             // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(366, 38);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 22);
-            this.label6.TabIndex = 10;
+            this.lblMiDni.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblMiDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMiDni.Location = new System.Drawing.Point(366, 38);
+            this.lblMiDni.Name = "lblMiDni";
+            this.lblMiDni.Size = new System.Drawing.Size(130, 22);
+            this.lblMiDni.TabIndex = 10;
             // 
-            // label7
+            // lblMiNombre
             // 
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label7.Location = new System.Drawing.Point(366, 68);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(130, 22);
-            this.label7.TabIndex = 11;
+            this.lblMiNombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblMiNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMiNombre.Location = new System.Drawing.Point(366, 68);
+            this.lblMiNombre.Name = "lblMiNombre";
+            this.lblMiNombre.Size = new System.Drawing.Size(130, 22);
+            this.lblMiNombre.TabIndex = 11;
             // 
-            // label8
+            // lblMiApellido
             // 
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.Location = new System.Drawing.Point(366, 100);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(130, 22);
-            this.label8.TabIndex = 12;
+            this.lblMiApellido.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblMiApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMiApellido.Location = new System.Drawing.Point(366, 100);
+            this.lblMiApellido.Name = "lblMiApellido";
+            this.lblMiApellido.Size = new System.Drawing.Size(130, 22);
+            this.lblMiApellido.TabIndex = 12;
             // 
-            // label9
+            // lblMateria
             // 
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label9.Location = new System.Drawing.Point(366, 130);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(130, 22);
-            this.label9.TabIndex = 13;
+            this.lblMateria.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblMateria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMateria.Location = new System.Drawing.Point(366, 130);
+            this.lblMateria.Name = "lblMateria";
+            this.lblMateria.Size = new System.Drawing.Size(130, 22);
+            this.lblMateria.TabIndex = 13;
             // 
-            // label10
+            // lblCarrera
             // 
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label10.Location = new System.Drawing.Point(366, 161);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(130, 22);
-            this.label10.TabIndex = 14;
+            this.lblCarrera.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCarrera.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCarrera.Location = new System.Drawing.Point(366, 161);
+            this.lblCarrera.Name = "lblCarrera";
+            this.lblCarrera.Size = new System.Drawing.Size(130, 22);
+            this.lblCarrera.TabIndex = 14;
             // 
-            // label11
+            // lblFecha
             // 
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label11.Location = new System.Drawing.Point(366, 188);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(130, 22);
-            this.label11.TabIndex = 15;
+            this.lblFecha.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(366, 188);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(130, 22);
+            this.lblFecha.TabIndex = 15;
             // 
             // frmDatosDesarrollador
             // 
@@ -173,12 +182,12 @@
             this.BackgroundImage = global::PryEstructuraDatos.Properties.Resources.ImgFondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(562, 241);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.lblCarrera);
+            this.Controls.Add(this.lblMateria);
+            this.Controls.Add(this.lblMiApellido);
+            this.Controls.Add(this.lblMiNombre);
+            this.Controls.Add(this.lblMiDni);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -189,6 +198,7 @@
             this.Name = "frmDatosDesarrollador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos de Desarrollador ";
+            this.Load += new System.EventHandler(this.frmDatosDesarrollador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -204,11 +214,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblMiDni;
+        private System.Windows.Forms.Label lblMiNombre;
+        private System.Windows.Forms.Label lblMiApellido;
+        private System.Windows.Forms.Label lblMateria;
+        private System.Windows.Forms.Label lblCarrera;
+        private System.Windows.Forms.Label lblFecha;
     }
 }
