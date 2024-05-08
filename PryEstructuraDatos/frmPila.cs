@@ -51,13 +51,16 @@ namespace PryEstructuraDatos
                 Pila.Recorrer(dgvPila);
                 Pila.Recorrer(lstPila);
                 Pila.Recorrer();
+               
 
             }
             else
             {
+                MessageBox.Show("La Pila esta vacia");
                 lblCodigoEliminado.Text = "";
                 lblNombreEliminado.Text = "";
                 lblTramiteEliminado.Text = "";
+
             }
         }
 
@@ -66,6 +69,42 @@ namespace PryEstructuraDatos
             frmVentanaPrincipal x = new frmVentanaPrincipal();
             x.Show();
             this.Hide();
+        }
+
+        private void txtCodigoNuevo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigoNuevo.Text != "" && txtNombreNuevo.Text != "" && txtTramiteNuevo.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
+
+        private void txtNombreNuevo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigoNuevo.Text != "" && txtNombreNuevo.Text != "" && txtTramiteNuevo.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
+
+        private void txtTramiteNuevo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigoNuevo.Text != "" && txtNombreNuevo.Text != "" && txtTramiteNuevo.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
         }
     }
 }

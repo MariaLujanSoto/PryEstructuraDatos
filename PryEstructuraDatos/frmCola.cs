@@ -51,10 +51,12 @@ namespace PryEstructuraDatos
                 FilaDePersonas.Recorrer(dgvCola);
                 FilaDePersonas.Recorrer(lstCola);
                 FilaDePersonas.Recorrer();
+                
 
             }
             else
             {
+                MessageBox.Show("La Cola esta vacia");
                 lblCodigoEliminado.Text = "";
                 lblNombreEliminado.Text = "";
                 lblTramiteEliminado.Text = "";
@@ -70,7 +72,38 @@ namespace PryEstructuraDatos
 
         private void txtTramiteNuevo_TextChanged(object sender, EventArgs e)
         {
+            if (txtCodigoNuevo.Text != "" && txtNombreNuevo.Text != "" && txtTramiteNuevo.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
 
+        private void txtCodigoNuevo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigoNuevo.Text != "" && txtNombreNuevo.Text != "" && txtTramiteNuevo.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
+
+        private void txtNombreNuevo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigoNuevo.Text != "" && txtNombreNuevo.Text != "" && txtTramiteNuevo.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
         }
     }
 }

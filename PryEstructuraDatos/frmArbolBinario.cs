@@ -25,58 +25,59 @@ namespace PryEstructuraDatos
             Arbol.Recorrer(dgvArbolBinario);
             Arbol.Recorrer(lstArbolBinario);
             Arbol.Recorrer(cmbAB);
-               
+
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (txtCodigoNuevo.Text != "" && txtNombreNuevo.Text != "" && txtTramiteNuevo.Text != "")
-            {
-
-                clsNodo ObjNodo = new clsNodo();
-                ObjNodo.Codigo = Convert.ToInt32(txtCodigoNuevo.Text);
-                ObjNodo.Nombre = txtNombreNuevo.Text;
-                ObjNodo.Tramite = txtTramiteNuevo.Text;
-                Arbol.Agregar(ObjNodo);
-                Arbol.Recorrer(dgvArbolBinario);
-                Arbol.Recorrer(lstArbolBinario);
-                Arbol.Recorrer(trvArbolBinario);
-                Arbol.Recorrer(cmbAB);
+            clsNodo ObjNodo = new clsNodo();
+            ObjNodo.Codigo = Convert.ToInt32(txtCodigoNuevo.Text);
+            ObjNodo.Nombre = txtNombreNuevo.Text;
+            ObjNodo.Tramite = txtTramiteNuevo.Text;
+            Arbol.Agregar(ObjNodo);
+            Arbol.Recorrer(dgvArbolBinario);
+            Arbol.Recorrer(lstArbolBinario);
+            Arbol.Recorrer(trvArbolBinario);
+            Arbol.Recorrer(cmbAB);
 
 
-                txtCodigoNuevo.Text = "";
-                txtTramiteNuevo.Text = "";
-                txtNombreNuevo.Text = "";
+            txtCodigoNuevo.Text = "";
+            txtTramiteNuevo.Text = "";
+            txtNombreNuevo.Text = "";
 
-            }
-            else
-            {
-                MessageBox.Show("Debe complear todos los campos");
-                txtCodigoNuevo.Text = "";
-                txtTramiteNuevo.Text = "";
-                txtNombreNuevo.Text = "";
-            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+
+
             if (Arbol.Raiz != null)
             {
-                Int32 x = Convert.ToInt32(cmbAB.Text);
-                Arbol.Eliminar(x);
-                Arbol.Recorrer(dgvArbolBinario);
-                Arbol.Recorrer(lstArbolBinario);
-                Arbol.Recorrer(trvArbolBinario);
-                Arbol.Recorrer(cmbAB);
-                cmbAB.Text = "";
+                if (cmbAB.Text == "")
+                {
+                    MessageBox.Show("Debe seleccionar un valor");
+
+                }
+                else
+                {
+                    Int32 x = Convert.ToInt32(cmbAB.Text);
+                    Arbol.Eliminar(x);
+                    Arbol.Recorrer(dgvArbolBinario);
+                    Arbol.Recorrer(lstArbolBinario);
+                    Arbol.Recorrer(trvArbolBinario);
+                    Arbol.Recorrer(cmbAB);
+                    cmbAB.Text = "";
+                }
 
 
             }
             else
             {
-
-                MessageBox.Show("La lista esta vacia");
+                MessageBox.Show("El Arbol esta vacio");
+                cmbAB.Text = "";
             }
+                
+
         }
 
         private void btnEquilibrar_Click(object sender, EventArgs e)
@@ -111,6 +112,42 @@ namespace PryEstructuraDatos
             Arbol.RecorrerPostOrden(dgvArbolBinario);
             Arbol.RecorrerPostOrden(lstArbolBinario);
             Arbol.RecorrerPostOrden(cmbAB);
+        }
+
+        private void txtCodigoNuevo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigoNuevo.Text != "" && txtNombreNuevo.Text != "" && txtTramiteNuevo.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
+
+        private void txtNombreNuevo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigoNuevo.Text != "" && txtNombreNuevo.Text != "" && txtTramiteNuevo.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
+
+        private void txtTramiteNuevo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigoNuevo.Text != "" && txtNombreNuevo.Text != "" && txtTramiteNuevo.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
         }
     }
 }

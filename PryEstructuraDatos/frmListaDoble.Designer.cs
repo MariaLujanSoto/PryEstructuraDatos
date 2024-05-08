@@ -168,6 +168,7 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Enabled = false;
             this.btnAgregar.Location = new System.Drawing.Point(23, 164);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(154, 32);
@@ -182,6 +183,7 @@
             this.txtTramiteNuevo.Name = "txtTramiteNuevo";
             this.txtTramiteNuevo.Size = new System.Drawing.Size(100, 22);
             this.txtTramiteNuevo.TabIndex = 5;
+            this.txtTramiteNuevo.TextChanged += new System.EventHandler(this.txtTramiteNuevo_TextChanged);
             // 
             // txtNombreNuevo
             // 
@@ -189,6 +191,7 @@
             this.txtNombreNuevo.Name = "txtNombreNuevo";
             this.txtNombreNuevo.Size = new System.Drawing.Size(100, 22);
             this.txtNombreNuevo.TabIndex = 4;
+            this.txtNombreNuevo.TextChanged += new System.EventHandler(this.txtNombreNuevo_TextChanged);
             // 
             // txtCodigoNuevo
             // 
@@ -196,6 +199,7 @@
             this.txtCodigoNuevo.Name = "txtCodigoNuevo";
             this.txtCodigoNuevo.Size = new System.Drawing.Size(80, 22);
             this.txtCodigoNuevo.TabIndex = 3;
+            this.txtCodigoNuevo.TextChanged += new System.EventHandler(this.txtCodigoNuevo_TextChanged);
             // 
             // lblTramiteNuevo
             // 

@@ -26,10 +26,6 @@ namespace PryEstructuraDatos
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
-            if ( txtCodigoNuevo.Text != "" && txtNombreNuevo.Text != "" && txtTramiteNuevo.Text != "")
-            {   
-
                 clsNodo ObjNodo = new clsNodo();
                 ObjNodo.Codigo = Convert.ToInt32(txtCodigoNuevo.Text);
                 ObjNodo.Nombre = txtNombreNuevo.Text;
@@ -43,15 +39,7 @@ namespace PryEstructuraDatos
                 txtCodigoNuevo.Text = "";
                 txtTramiteNuevo.Text = "";
                 txtNombreNuevo.Text = "";
-
-            }
-            else
-            {
-                MessageBox.Show("Debe complear todos los campos");
-                txtCodigoNuevo.Text = "";
-                txtTramiteNuevo.Text = "";
-                txtNombreNuevo.Text = "";
-            }
+         
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -70,17 +58,20 @@ namespace PryEstructuraDatos
             }
             else
             {
-                if(cmbEliminar.Text== "")
+                
+                if(Lista.Primero == null)
                 {
-                    MessageBox.Show("Debe seleccionar un valor");
+                    MessageBox.Show("La Lista esta vacia");
+                    cmbEliminar.Text = "";
 
                 }
-                else
-                {
-                    MessageBox.Show("La lista esta vacia");
+                else{
+                    if (cmbEliminar.Text == "")
+                    {
+                        MessageBox.Show("Debe seleccionar un valor");
 
+                    }
                 }
-
             }
         }
 
@@ -89,6 +80,42 @@ namespace PryEstructuraDatos
             frmVentanaPrincipal x = new frmVentanaPrincipal();
             x.Show();
             this.Hide();
+        }
+
+        private void txtCodigoNuevo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigoNuevo.Text != "" && txtNombreNuevo.Text != "" && txtTramiteNuevo.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
+
+        private void txtNombreNuevo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigoNuevo.Text != "" && txtNombreNuevo.Text != "" && txtTramiteNuevo.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
+
+        private void txtTramiteNuevo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigoNuevo.Text != "" && txtNombreNuevo.Text != "" && txtTramiteNuevo.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
         }
     }
 }
