@@ -147,6 +147,10 @@ namespace PryEstructuraDatos
 
         public void PostOrden(ComboBox Cmb, clsNodo R)
         {
+            if (R == null)
+            {
+                return;
+            }
             if (R.Izquierdo != null)
             {
                 PostOrden(Cmb, R.Izquierdo);
@@ -162,6 +166,10 @@ namespace PryEstructuraDatos
 
         public void PostOrden(ListBox lst, clsNodo R)
         {
+            if (R == null)
+            {
+                return;
+            }
             if (R.Izquierdo != null)
             {
                 PostOrden(lst, R.Izquierdo);
@@ -177,6 +185,10 @@ namespace PryEstructuraDatos
 
         public void PostOrden(DataGridView dgv, clsNodo R)
         {
+            if (R == null)
+            {
+                return;
+            }
             if (R.Izquierdo != null)
             {
                 PostOrden(dgv, R.Izquierdo);
@@ -194,6 +206,10 @@ namespace PryEstructuraDatos
         //PREORDEN
         private void PreOrden(clsNodo R, TreeNode nodoTreeView)
         {
+            if (R == null)
+            {
+                return;
+            }
             TreeNode NodoPadre = new TreeNode(R.Codigo.ToString());
 
             nodoTreeView.Nodes.Add(NodoPadre);
@@ -211,6 +227,10 @@ namespace PryEstructuraDatos
 
         public void PreOrden(DataGridView dgv, clsNodo R) 
         {
+            if (R == null)
+            {
+                return;
+            }
             dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
 
             if (R.Izquierdo != null)
@@ -225,6 +245,10 @@ namespace PryEstructuraDatos
         }
         public void PreOrden(ComboBox Cmb, clsNodo R) 
         {
+            if (R == null)
+            {
+                return;
+            }
             Cmb.Items.Add(R.Codigo);
 
             if (R.Izquierdo != null)
@@ -240,6 +264,10 @@ namespace PryEstructuraDatos
 
         public void PreOrden(ListBox lst, clsNodo R) 
         {
+            if (R == null)
+            {
+                return;
+            }
             lst.Items.Add(R.Codigo);
 
             if (R.Izquierdo != null)
@@ -257,6 +285,10 @@ namespace PryEstructuraDatos
 
         public void InOrdenAsc(DataGridView Dgv, clsNodo R)
         {
+            if (R == null)
+            {
+                return;
+            }
             if (R.Izquierdo != null)
             {
                 InOrdenAsc(Dgv, R.Izquierdo);
@@ -270,7 +302,11 @@ namespace PryEstructuraDatos
         }
         public void InOrdenAsc(ListBox Lst, clsNodo R)
         {
-            if(R.Izquierdo != null)
+            if (R == null)
+            {
+                return;
+            }
+            if (R.Izquierdo != null)
             {
                 InOrdenAsc(Lst, R.Izquierdo);
             }
@@ -284,6 +320,10 @@ namespace PryEstructuraDatos
 
         public void InOrdenAsc(ComboBox Cmb, clsNodo R)
         {
+            if (R == null)
+            {
+                return;
+            }
             if (R.Izquierdo != null)
             {
                 InOrdenAsc(Cmb, R.Izquierdo);
@@ -298,6 +338,10 @@ namespace PryEstructuraDatos
 
         public void InOrdenDesc(DataGridView Dgv, clsNodo R)
         {
+            if (R == null)
+            {
+                return;
+            }
             if (R.Derecho != null)
             {
                 InOrdenDesc(Dgv, R.Derecho);
@@ -313,6 +357,10 @@ namespace PryEstructuraDatos
 
         public void InOrdenDesc(ComboBox Cmb, clsNodo R)
         {
+            if (R == null)
+            {
+                return;
+            }
             if (R.Derecho != null)
             {
                 InOrdenDesc(Cmb, R.Derecho);
@@ -326,6 +374,10 @@ namespace PryEstructuraDatos
 
         public void InOrdenDesc(ListBox Lst, clsNodo R)
         {
+            if (R == null)
+            {
+                return;
+            }
             if (R.Derecho != null)
             {
                 InOrdenDesc(Lst, R.Derecho);
@@ -381,7 +433,8 @@ namespace PryEstructuraDatos
 
         public void GrabarVectorInOrden(clsNodo NodoPadre, Int32 Codigo)
         {
-            if(NodoPadre.Izquierdo != null)
+            
+            if (NodoPadre.Izquierdo != null)
             {
                 GrabarVectorInOrden(NodoPadre.Izquierdo, Codigo);
             }
