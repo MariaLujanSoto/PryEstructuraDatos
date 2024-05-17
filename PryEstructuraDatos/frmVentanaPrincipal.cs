@@ -61,5 +61,11 @@ namespace PryEstructuraDatos
                 Application.Exit();
             }
         }
+
+        private void consultasEnLaBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaseDatosRepasoOperaciones x = new frmBaseDatosRepasoOperaciones();
+            x.Show();
+        }
     }
 }

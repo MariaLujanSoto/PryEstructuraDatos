@@ -21,5 +21,11 @@ namespace PryEstructuraDatos
         {
 
         }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            clsBaseDatos objBaseDatos = new clsBaseDatos();
+            objBaseDatos.Listar(dtvGrillaSql, txtSql.Text);
+        }
     }
 }
