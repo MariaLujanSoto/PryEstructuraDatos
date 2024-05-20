@@ -17,7 +17,9 @@ namespace PryEstructuraDatos
 
         private string varCadenaConexion1 = "Provider=Microsoft.JET.OLEDB.4.0;Data Source=Libreria.mdb";
         //private string varCadenaConexion2 = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Libreria.mdb";
-        public void Listar(DataGridView Grilla, string ConsultaSL)
+        
+        
+        public void Listar(DataGridView Grilla)
         {
 
             try
@@ -45,6 +47,35 @@ namespace PryEstructuraDatos
 
             }
 
+
+        }
+
+        public void Listar(DataGridView Grilla, String ConsultaSQL)
+        {
+            try
+            {
+                conexion.ConnectionString = varCadenaConexion1;
+                conexion.Open();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = ConsultaSQL;
+
+                adaptador = new OleDbDataAdapter(comando);
+                DataSet DS = new DataSet();
+                adaptador.Fill(DS, "Tabla");
+
+                Grilla.DataSource = null;
+                Grilla.DataSource = DS.Tables["Tabla"];
+
+                conexion.Close();
+            }
+            catch (Exception x)
+            {
+
+                MessageBox.Show(x.ToString());
+
+            }
         }
 
 

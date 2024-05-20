@@ -67,5 +67,11 @@ namespace PryEstructuraDatos
             frmBaseDatosRepasoOperaciones x = new frmBaseDatosRepasoOperaciones();
             x.Show();
         }
+
+        private void operacionesConTablasDeBasesDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaseDatosOperaciones x = new frmBaseDatosOperaciones();
+            x.Show();
+        }
     }
 }
