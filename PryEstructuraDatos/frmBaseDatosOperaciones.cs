@@ -81,7 +81,11 @@ namespace PryEstructuraDatos
 
         private void btnUnion_Click(object sender, EventArgs e)
         {
-
+            //SELECT* FROM Libro WHERE IdAutor = 2
+            //UNION
+            //SELECT* FROM Libro WHERE IdAutor = 5
+            //UNION
+            //SELECT* FROM Libro WHERE IdAutor = 3
         }
 
         private void btnInterseccion_Click(object sender, EventArgs e)
