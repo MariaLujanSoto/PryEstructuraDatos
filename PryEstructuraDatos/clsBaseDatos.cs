@@ -15,8 +15,8 @@ namespace PryEstructuraDatos
         private OleDbCommand comando = new OleDbCommand();
         private OleDbDataAdapter adaptador = new OleDbDataAdapter();
 
-        private string varCadenaConexion1 = "Provider=Microsoft.JET.OLEDB.4.0;Data Source=Libreria.mdb";
-        //private string varCadenaConexion2 = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Libreria.mdb";
+        //private string varCadenaConexion1 = "Provider=Microsoft.JET.OLEDB.4.0;Data Source=Libreria.mdb";
+        private string varCadenaConexion1 = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Libreria.mdb";
         
         
         public void Listar(DataGridView Grilla)

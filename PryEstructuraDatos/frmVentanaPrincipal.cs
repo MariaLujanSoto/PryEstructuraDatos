@@ -64,13 +64,19 @@ namespace PryEstructuraDatos
 
         private void consultasEnLaBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBaseDatosRepasoOperaciones x = new frmBaseDatosRepasoOperaciones();
+            frmBaseDatosConsultaOperaciones x = new frmBaseDatosConsultaOperaciones();
             x.Show();
         }
 
         private void operacionesConTablasDeBasesDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmBaseDatosOperaciones x = new frmBaseDatosOperaciones();
+            x.Show();
+        }
+
+        private void repasoDeOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRepasoOperacionesBaseDatos x = new frmRepasoOperacionesBaseDatos();
             x.Show();
         }
     }

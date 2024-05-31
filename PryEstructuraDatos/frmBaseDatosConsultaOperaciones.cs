@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PryEstructuraDatos
 {
-    public partial class frmBaseDatosRepasoOperaciones : Form
+    public partial class frmBaseDatosConsultaOperaciones : Form
     {
-        public frmBaseDatosRepasoOperaciones()
+        public frmBaseDatosConsultaOperaciones()
         {
             InitializeComponent();
         }

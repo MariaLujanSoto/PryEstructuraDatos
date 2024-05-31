@@ -1,6 +1,6 @@
 ﻿namespace PryEstructuraDatos
 {
-    partial class frmBaseDatosRepasoOperaciones
+    partial class frmBaseDatosConsultaOperaciones
     {
         /// <summary>
         /// Required designer variable.
@@ -60,16 +60,16 @@
             this.txtSql.Size = new System.Drawing.Size(680, 119);
             this.txtSql.TabIndex = 2;
             // 
-            // frmBaseDatosRepasoOperaciones
+            // frmBaseDatosConsultaOperaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PryEstructuraDatos.Properties.Resources.ImgFondo;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(746, 453);
             this.Controls.Add(this.txtSql);
             this.Controls.Add(this.dtvGrillaSql);
             this.Controls.Add(this.btnListar);
-            this.Name = "frmBaseDatosRepasoOperaciones";
+            this.Name = "frmBaseDatosConsultaOperaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Repaso de Operaciones de Base de Datos";
             ((System.ComponentModel.ISupportInitialize)(this.dtvGrillaSql)).EndInit();
