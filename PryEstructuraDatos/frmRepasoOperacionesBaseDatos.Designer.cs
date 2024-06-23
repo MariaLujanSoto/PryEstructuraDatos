@@ -77,7 +77,10 @@
             // 
             this.cmbConsulta.FormattingEnabled = true;
             this.cmbConsulta.Items.AddRange(new object[] {
-            "Diferencia"});
+            "Paises que no tienen libros",
+            "Libros por idioma",
+            "Autores que tienen libros",
+            "Libros publicados después del año 2000"});
             this.cmbConsulta.Location = new System.Drawing.Point(249, 31);
             this.cmbConsulta.Name = "cmbConsulta";
             this.cmbConsulta.Size = new System.Drawing.Size(425, 21);
