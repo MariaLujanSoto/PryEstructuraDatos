@@ -26,183 +26,128 @@ namespace PryEstructuraDatos
             {
 
                 case 0:
-                    lblEnunciado.Text = cmbConsulta.Text + ":" + "Paises que no tienen libros";
-                    VarSQL = " select * from pais where idpais not in (select idpais from libro)";
+                    // Operación: Diferencia
+                    lblEnunciado.Text = cmbConsulta.Text + ": Paises que no tienen libros";
+                    VarSQL = "SELECT * FROM pais WHERE idpais NOT IN (SELECT idpais FROM libro)";
                     break;
 
                 case 1:
-                    // Operación: Proyección con subconsulta
-                    lblEnunciado.Text = cmbConsulta.Text + ": Libros por idioma";
-                    VarSQL = @"
-                    SELECT idioma.nombre, 
-                           (SELECT COUNT(*) 
-                            FROM libro 
-                            WHERE libro.ididioma = idioma.ididioma) AS cantidad_libros 
-                    FROM idioma";
+                    // Operación: Intersección
+                    lblEnunciado.Text = cmbConsulta.Text + ": Libros cuyo idpais sea menor a 2 ";
+                    VarSQL = " SELECT *  FROM libro WHERE idpais IN (SELECT DISTINCT  idpais FROM libro WHERE idpais < 2)";
                     break;
 
                 case 2:
-                    // Operación: Proyección con subconsulta
-                    lblEnunciado.Text = cmbConsulta.Text + ": Autores que tienen libros";
-                    VarSQL = "SELECT nombre FROM autor WHERE idautor IN (SELECT DISTINCT idautor FROM libro)";
+                    // Operación: Unión
+                    lblEnunciado.Text = cmbConsulta.Text + ": Autores y Idiomas ";
+                    VarSQL = "SELECT * FROM autor UNION SELECT * FROM idioma";
                     break;
 
                 case 3:
-                    // Operación: Selección
-                    lblEnunciado.Text = cmbConsulta.Text + ": Libros publicados después del año 2000";
-                    VarSQL = "SELECT * FROM libro WHERE año > 2000";
+                    // Operación: Selección Simple
+                    lblEnunciado.Text = cmbConsulta.Text + ": Libros cuyo precio supera los 500 ";
+                    VarSQL = "SELECT * FROM libro WHERE Precio > 500";
                     break;
 
                 case 4:
-                    // Operación: Proyección con subconsulta
-                    lblEnunciado.Text = cmbConsulta.Text + ": Libros y sus autores";
-                    VarSQL = "SELECT titulo, (SELECT nombre FROM autor WHERE autor.idautor = libro.idautor) AS autor FROM libro";
+                    // Operación: Selección por multiatributo por Intersección
+                    lblEnunciado.Text = cmbConsulta.Text + ": Libros publicados con ID mayor a 5 y con cantidad mayor a 10 ";
+                    VarSQL = "SELECT * FROM libro WHERE idlibro> 5 AND cantidad > 10 ";
                     break;
 
                 case 5:
-                    // Operación: Proyección con subconsulta
-                    lblEnunciado.Text = cmbConsulta.Text + ": Idiomas y el promedio de precios de sus libros";
-                    VarSQL = @"
-                       SELECT idioma.nombre, 
-                               (SELECT AVG(libro.cantidadmprecio) 
-                                FROM libro 
-                                WHERE libro.ididioma = idioma.ididioma) AS promedio_precio 
-                        FROM idioma";
+                    // Operación: Selección por multiatributo por Convolución
+                    lblEnunciado.Text = cmbConsulta.Text + ": Libros publicados después del año 2000 o con precio mayor a 20 ";
+                    VarSQL = "SELECT * FROM libro WHERE año > '2000' OR precio > 20";
                     break;
 
                 case 6:
-                    // Operación: Proyección con subconsulta
-                    lblEnunciado.Text = cmbConsulta.Text + ": Libros por país";
-                    VarSQL = @"
-                        SELECT pais.nombre, 
-                               (SELECT COUNT(*) 
-                                FROM libro 
-                                WHERE libro.idpais = pais.idpais) AS cantidad_libros 
-                        FROM pais";
+                    // Operación: Orden
+                    lblEnunciado.Text = cmbConsulta.Text + ": Libros ordenados por año ";
+                    VarSQL = "SELECT * FROM libro ORDER BY año DESC";
                     break;
 
                 case 7:
-                    // Operación: Proyección con subconsulta
-                    lblEnunciado.Text = cmbConsulta.Text + ": Autores y cantidad de libros";
-                    VarSQL = @"
-                        SELECT autor.nombre, 
-                               (SELECT COUNT(*) 
-                                FROM libro 
-                                WHERE libro.idautor = autor.idautor) AS cantidad_libros 
-                        FROM autor";
+                    // Operación: Proyección por un atributo
+                    lblEnunciado.Text = cmbConsulta.Text + ": Títulos de los libros ";
+                    VarSQL = "SELECT titulo FROM libro";
                     break;
 
                 case 8:
-                    // Operación: Selección con subconsulta
-                    lblEnunciado.Text = cmbConsulta.Text + ": Libros en inglés";
-                    VarSQL = "SELECT titulo FROM libro WHERE ididioma = (SELECT ididioma FROM idioma WHERE nombre = 'Inglés')";
+                    // Operación: Proyección por multiatributo
+                    lblEnunciado.Text = cmbConsulta.Text + ": Títulos y años de los libros";
+                    VarSQL = "SELECT titulo, año FROM libro";
                     break;
 
                 case 9:
-                    // Operación: Proyección con subconsulta y cláusula HAVING
-                    lblEnunciado.Text = cmbConsulta.Text + ": Países con más de 10 libros";
-                    VarSQL = @"
-                        SELECT nombre 
-                        FROM pais 
-                        WHERE (SELECT COUNT(*) 
-                               FROM libro 
-                               WHERE libro.idpais = pais.idpais) > 10";
+                    // Operación: Juntar
+                    lblEnunciado.Text = cmbConsulta.Text + ": Libros y sus autores";
+                    VarSQL = "SELECT libro.titulo, autor.nombre AS autor  FROM libro, autor WHERE libro.idautor = autor.idautor";
                     break;
 
                 case 10:
-                    // Operación: Selección con subconsulta
-                    lblEnunciado.Text = cmbConsulta.Text + ": Autores sin libros";
-                    VarSQL = "SELECT nombre FROM autor WHERE idautor NOT IN (SELECT idautor FROM libro)";
+                    // Operación: Diferencia
+                    lblEnunciado.Text = cmbConsulta.Text + ": Autores sin libros ";
+                    VarSQL = "SELECT * FROM autor WHERE idautor NOT IN (SELECT idautor FROM libro)";
                     break;
 
                 case 11:
-                    // Operación: Proyección con subconsulta
-                    lblEnunciado.Text = cmbConsulta.Text + ": Libros por año";
-                    VarSQL = @"
-                        SELECT DISTINCT año, 
-                               (SELECT COUNT(*) 
-                                FROM libro AS L 
-                                WHERE L.año = libro.año) AS cantidad_libros 
-                        FROM libro";
+                    // Operación: Intersección
+                    lblEnunciado.Text = cmbConsulta.Text + ": Libros en español publicados antes del año 2000 ";
+                    VarSQL =@"SELECT * FROM libro WHERE ididioma = (SELECT ididioma FROM idioma WHERE nombre = 'Español') AND año < '2000'"; 
                     break;
 
                 case 12:
-                    // Operación: Proyección
-                    lblEnunciado.Text = cmbConsulta.Text + ": Libros y sus precios";
-                    VarSQL = "SELECT titulo, cantidadmprecio FROM libro";
+                    // Operación: Unión
+                    lblEnunciado.Text = cmbConsulta.Text + ": Países y Idiomas";
+                    VarSQL = " SELECT * FROM pais UNION SELECT * FROM idioma";
                     break;
 
                 case 13:
-                    // Operación: Proyección con subconsulta
-                    lblEnunciado.Text = cmbConsulta.Text + ": Autores y sus idiomas de publicación";
-                    VarSQL = @"
-                        SELECT autor.nombre, 
-                               (SELECT nombre FROM idioma WHERE idioma.ididioma = libro.ididioma) AS idioma 
-                        FROM autor 
-                        WHERE idautor IN (SELECT DISTINCT idautor FROM libro)";
+                    // Operación: Selección Simple
+                    lblEnunciado.Text = cmbConsulta.Text + ": Libros con precio mayor a 50";
+                    VarSQL = "SELECT * FROM libro WHERE precio > 50";
                     break;
 
                 case 14:
-                    // Operación: Selección
-                    lblEnunciado.Text = cmbConsulta.Text + ": Libros publicados en el siglo XXI";
-                    VarSQL = "SELECT * FROM libro WHERE año >= 2001 AND año <= 2100";
+                    // Operación: Selección por multiatributo por Intersección
+                    lblEnunciado.Text = cmbConsulta.Text + ": Libros publicados antes del año 2000 y con precio mayor a 30 ";
+                    VarSQL = "SELECT * FROM libro WHERE año < '2000' AND precio > 30";
                     break;
 
                 case 15:
-                    // Operación: Proyección con subconsulta
-                    lblEnunciado.Text = cmbConsulta.Text + ": Países con autores que tienen libros";
-                    VarSQL = "SELECT nombre FROM pais WHERE idpais IN (SELECT DISTINCT idpais FROM autor WHERE idautor IN (SELECT idautor FROM libro))";
+                    // Operación: Selección por multiatributo por Convolución
+                    lblEnunciado.Text = cmbConsulta.Text + ": Libros publicados antes del año 2000 o con precio mayor a 30";
+                    VarSQL = "SELECT * FROM libro WHERE año < '2000' OR precio > 30";
                     break;
 
                 case 16:
-                    // Operación: Proyección con subconsultas
-                    lblEnunciado.Text = cmbConsulta.Text + ": Libros y sus autores y países";
-                    VarSQL = @"
-                        SELECT titulo, 
-                               (SELECT nombre FROM autor WHERE autor.idautor = libro.idautor) AS autor, 
-                               (SELECT nombre FROM pais WHERE pais.idpais = libro.idpais) AS pais 
-                        FROM libro";
+                    // Operación: Orden
+                    lblEnunciado.Text = cmbConsulta.Text + ": Libros ordenados por precio ascendente";
+                    VarSQL = "SELECT * FROM libro ORDER BY precio ASC";
                     break;
 
                 case 17:
-                    // Operación: Proyección con subconsulta
-                    lblEnunciado.Text = cmbConsulta.Text + ": Libros y sus idiomas y precios";
-                    VarSQL = @"
-                        SELECT titulo, 
-                               (SELECT nombre FROM idioma WHERE idioma.ididioma = libro.ididioma) AS idioma, 
-                               cantidadmprecio 
-                        FROM libro";
+                    // Operación: Proyección por un atributo
+                    lblEnunciado.Text = cmbConsulta.Text + ": Nombres de los autores";
+                    VarSQL = "SELECT nombre FROM autor";
                     break;
 
                 case 18:
-                    // Operación: Proyección con subconsulta y selección
-                    lblEnunciado.Text = cmbConsulta.Text + ": Países con libros en español";
-                    VarSQL = "SELECT nombre FROM pais WHERE idpais IN (SELECT idpais FROM libro WHERE ididioma = (SELECT ididioma FROM idioma WHERE nombre = 'Español'))";
+                    // Operación: Proyección por multiatributo
+                    lblEnunciado.Text = cmbConsulta.Text + ": Nombres e IDs de los autores ";
+                    VarSQL = "SELECT nombre, idautor FROM autor";
                     break;
 
                 case 19:
-                    // Operación: Proyección con subconsulta
-                    lblEnunciado.Text = cmbConsulta.Text + ": Libros por autor y año";
-                    VarSQL = @"
-                    SELECT autor.nombre, libro.año, 
-                           (SELECT COUNT(*) 
-                            FROM libro AS L 
-                            WHERE L.idautor = autor.idautor AND L.año = libro.año) AS cantidad_libros 
-                    FROM autor JOIN libro ON autor.idautor = libro.idautor";
-                    break;
-
-                case 20:
-                    // Operación: Proyección con subconsulta
-                    lblEnunciado.Text = cmbConsulta.Text + ": Libros y sus países y años de publicación";
-                    VarSQL = @"
-                    SELECT titulo, 
-                           (SELECT nombre FROM pais WHERE pais.idpais = libro.idpais) AS pais, 
-                           año 
-                    FROM libro";
+                    // Operación: Juntar
+                    lblEnunciado.Text = cmbConsulta.Text + ": Libros y sus idiomas";
+                    VarSQL = "SELECT libro.titulo, idioma.nombre AS idioma FROM libro, idioma WHERE libro.ididioma = idioma.ididioma";
                     break;
 
                 default:
                     lblEnunciado.Text = "Selecciona una opcion en la lista desplegable";
+                    MessageBox.Show("Seleccione alguna de las opciones");
 
                     break;
               

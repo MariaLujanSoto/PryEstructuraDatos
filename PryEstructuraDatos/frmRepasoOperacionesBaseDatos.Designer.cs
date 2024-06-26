@@ -77,10 +77,26 @@
             // 
             this.cmbConsulta.FormattingEnabled = true;
             this.cmbConsulta.Items.AddRange(new object[] {
-            "Paises que no tienen libros",
-            "Libros por idioma",
-            "Autores que tienen libros",
-            "Libros publicados después del año 2000"});
+            "Diferencia",
+            "Intersección",
+            "Unión ",
+            "Selección Simple",
+            "Selección por multiatributo por Intersección",
+            "Selección por multiatributo por Convolución",
+            "Orden",
+            "Proyección por un atributo",
+            "Proyección por multiatributo",
+            "Juntar",
+            "Diferencia",
+            "Intersección",
+            "Unión",
+            "Selección Simple",
+            "Selección por multiatributo por Intersección",
+            "Selección por multiatributo por Convolución",
+            "Orden",
+            "Proyección por un atributo",
+            "Proyección por multiatributo",
+            "Juntar"});
             this.cmbConsulta.Location = new System.Drawing.Point(249, 31);
             this.cmbConsulta.Name = "cmbConsulta";
             this.cmbConsulta.Size = new System.Drawing.Size(425, 21);
