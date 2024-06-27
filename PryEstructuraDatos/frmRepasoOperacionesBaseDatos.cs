@@ -58,7 +58,7 @@ namespace PryEstructuraDatos
                 case 5:
                     // Operación: Selección por multiatributo por Convolución
                     lblEnunciado.Text = cmbConsulta.Text + ": Libros publicados después del año 2000 o con precio mayor a 20 ";
-                    VarSQL = "SELECT * FROM libro WHERE año > '2000' OR precio > 20";
+                    VarSQL = "SELECT * FROM  (SELECT * FROM  libro WHERE precio > 20) WHERE año > '2000'";
                     break;
 
                 case 6:
@@ -118,7 +118,7 @@ namespace PryEstructuraDatos
                 case 15:
                     // Operación: Selección por multiatributo por Convolución
                     lblEnunciado.Text = cmbConsulta.Text + ": Libros publicados antes del año 2000 o con precio mayor a 30";
-                    VarSQL = "SELECT * FROM libro WHERE año < '2000' OR precio > 30";
+                    VarSQL = "SELECT * FROM (SELECT * FROM libro WHERE año < '2000') WHERE precio > 30";
                     break;
 
                 case 16:
