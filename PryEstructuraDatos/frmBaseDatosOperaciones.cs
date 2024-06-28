@@ -81,11 +81,9 @@ namespace PryEstructuraDatos
 
         private void btnUnion_Click(object sender, EventArgs e)
         {
-            //SELECT* FROM Libro WHERE IdAutor = 2
-            //UNION
-            //SELECT* FROM Libro WHERE IdAutor = 5
-            //UNION
-            //SELECT* FROM Libro WHERE IdAutor = 3
+            String varSQL = "SELECT * FROM Libro WHERE IdIdioma = 2 UNION SELECT * FROM Libro WHERE IdIdioma = 5 UNION SELECT * FROM Libro WHERE IdIdioma = 3";
+            objBaseDatos.Listar(dtvGrillaBD, varSQL);
+
         }
 
         private void btnInterseccion_Click(object sender, EventArgs e)
